@@ -1,6 +1,6 @@
 # Chrisboard
 
-Local-only read-only WorkNode dashboard proof for Chris.
+Private read-only WorkNode dashboard proof for Chris.
 
 ## What v1 proves
 
@@ -17,17 +17,25 @@ Local-only read-only WorkNode dashboard proof for Chris.
 
 Adapters expose `loadWorkNodes()` only and declare `mode: 'read-only'` plus allowlisted sources. They do not include write, dispatch, resume, pause, assign, mark-done, POST, PUT, PATCH, or DELETE behavior.
 
+## Hosting authority
+
+Deployment SSOT is Cloudflare Pages, not GitHub Pages.
+
+- Production URL: `https://chriskim12.work`
+- Cloudflare Pages project: `chrisboard`
+- Access boundary: Cloudflare Access allows Chris only.
+- DNS must route through Cloudflare proxy for Access enforcement.
+- GitHub Pages is intentionally disabled and has no workflow/CNAME authority.
+
 ## Non-goals
 
-- No GitHub remote, push, PR, merge, release, or deploy.
-- No DNS, auth, proxy, gateway restart/reload, or public URL exposure.
-- No Discord, Kanban, GitHub, worker, production, customer, provider, env, or secret mutation.
-- No task creation, assignment, status movement, mark-done, dispatch, pause, or resume controls.
+- No control-panel behavior, task creation, assignment, status movement, mark-done, dispatch, pause, or resume controls.
+- No writable Discord, Kanban, GitHub, worker, production, customer, provider, env, or secret mutation from the app.
 - No broad historical backfill or automatic correlation claim.
 
 ## Future approval gates
 
-Separate Chris approval is required before turning Chrisboard into a control panel, connecting writable systems, publishing `chriskim12.work`, creating a remote, deploying, restarting gateways, or dispatching/resuming workers.
+Separate Chris approval is required before turning Chrisboard into a control panel, connecting writable systems, restarting gateways, or dispatching/resuming workers.
 
 ## Local commands
 
