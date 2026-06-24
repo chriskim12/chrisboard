@@ -21,7 +21,7 @@ Deployment SSOT is Cloudflare Pages, not GitHub Pages.
 
 - Production URL: `https://chriskim12.work`
 - Cloudflare Pages project: `chrisboard`
-- Access boundary: Cloudflare Access allows Chris only on `chriskim12.work`, `www.chriskim12.work`, and `chrisboard.pages.dev`.
+- Access boundary: Cloudflare Access allows Chris only on `chriskim12.work`, `www.chriskim12.work`, `chrisboard.pages.dev`, and `*.chrisboard.pages.dev` preview deployments.
 - DNS must route through Cloudflare proxy for Access enforcement.
 - GitHub Pages is intentionally disabled and has no workflow/CNAME authority.
 
