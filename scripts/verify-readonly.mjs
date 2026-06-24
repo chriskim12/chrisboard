@@ -20,19 +20,29 @@ for (const status of requiredStatuses) {
   }
 }
 
-const localAdapter = read('src/adapters/localProofAdapter.ts');
-const realSourceCount = (localAdapter.match(/realSource:/g) ?? []).length;
-if (realSourceCount < 2) {
-  throw new Error(`Expected at least 2 real read-only WorkNodes, found ${realSourceCount}`);
+const worknodes = JSON.parse(read('src/data/worknodes.json'));
+if (!Array.isArray(worknodes) || worknodes.length < 5) {
+  throw new Error('Expected src/data/worknodes.json to contain at least 5 WorkNodes');
 }
-for (const required of [
-  '/home/ubuntu/.hermes/omh/task-management-dashboard/plans/2026-06-24-chrisboard-v1-readonly-proof.md',
-  '.gjc/ultragoal/goals.json',
-  "mode: 'read-only'",
-  'redaction:',
-]) {
-  if (!localAdapter.includes(required)) {
-    throw new Error(`Local proof adapter missing required allowlist/redaction marker: ${required}`);
+const realSourceCount = worknodes.filter((node) => node.realSource).length;
+if (realSourceCount < 2) {
+  throw new Error(`Expected at least 2 real read-only WorkNodes in JSON, found ${realSourceCount}`);
+}
+for (const node of worknodes) {
+  if (!requiredStatuses.includes(node.canonicalStatus)) {
+    throw new Error(`${node.id} has invalid status ${node.canonicalStatus}`);
+  }
+  for (const evidence of node.evidenceLinks ?? []) {
+    if (evidence.redacted !== true) {
+      throw new Error(`${node.id}: evidence ${evidence.label} is not marked redacted`);
+    }
+  }
+}
+
+const jsonAdapter = read('src/adapters/jsonWorkNodeAdapter.ts');
+for (const required of ['mode: \'read-only\'', 'src/data/worknodes.json']) {
+  if (!jsonAdapter.includes(required)) {
+    throw new Error(`JSON adapter missing required read-only marker: ${required}`);
   }
 }
 
@@ -53,8 +63,16 @@ for (const [file, source] of appSource) {
   }
 }
 
+const visibleSources = ['src/App.tsx', 'src/components/Board.tsx', 'src/components/WorkCard.tsx'];
+for (const file of visibleSources) {
+  const source = read(file);
+  if (source.includes("join(' → ')") || source.includes('status-vocabulary')) {
+    throw new Error(`${file} contains workflow legend/subtitle residue`);
+  }
+}
+
 const readme = read('README.md');
-for (const required of ['read-only', 'Non-goals', 'Future approval gates', 'TRIAGE', 'RESIDUE']) {
+for (const required of ['read-only', 'Non-goals', 'Future approval gates', 'TRIAGE', 'RESIDUE', 'workflow legends/subtitles are intentionally absent']) {
   if (!readme.includes(required)) {
     throw new Error(`README missing ${required}`);
   }
@@ -63,6 +81,7 @@ for (const required of ['read-only', 'Non-goals', 'Future approval gates', 'TRIA
 console.log(JSON.stringify({
   status: 'passed',
   statuses: requiredStatuses,
+  jsonWorkNodes: worknodes.length,
   realReadOnlyWorkNodes: realSourceCount,
   adapterFiles,
 }, null, 2));

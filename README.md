@@ -8,10 +8,8 @@ Private read-only WorkNode dashboard proof for Chris.
 - Exact status vocabulary: TRIAGE, TODO, DOING, WAITING, REVIEW, DONE, RESIDUE.
 - WorkNode kinds remain distinct: ParentGoal, ChildWork, StandaloneTask.
 - Parent Done is not inferred from child Done alone; parent acceptance requires explicit source evidence.
-- Mock WorkNodes cover planning, active, waiting, review, done, residue, conflict, evidence-missing, parent-partial, and standalone cases.
-- Two real read-only WorkNodes are rendered from allowlisted/redacted local evidence:
-  - `/home/ubuntu/.hermes/omh/task-management-dashboard/plans/2026-06-24-chrisboard-v1-readonly-proof.md`
-  - `.gjc/ultragoal/goals.json`
+- Static `src/data/worknodes.json` read model rendered through a read-only adapter.
+- Minimal board chrome: status columns are structure; workflow legends/subtitles are intentionally absent.
 
 ## Read-only boundary
 

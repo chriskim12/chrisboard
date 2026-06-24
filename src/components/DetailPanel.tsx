@@ -5,61 +5,65 @@ interface DetailPanelProps {
   node: WorkNode;
 }
 
+const kindLabel = {
+  ParentGoal: 'Parent',
+  ChildWork: 'Child',
+  StandaloneTask: 'Standalone',
+};
+
+function parentLabel(node: WorkNode) {
+  if (node.kind === 'ParentGoal') return 'self';
+  if (node.kind === 'ChildWork') return node.parentGoalTitle ?? 'unknown';
+  return 'none';
+}
+
 export function DetailPanel({ node }: DetailPanelProps) {
-  const parentLabel =
-    node.kind === 'ParentGoal' ? 'self' : node.kind === 'ChildWork' ? (node.parentGoalTitle ?? 'unknown/provisional') : 'none';
   return (
     <aside className="detail-panel">
-      <StatusChip status={node.canonicalStatus} />
+      <div className="detail-head">
+        <StatusChip status={node.canonicalStatus} />
+        <span>{kindLabel[node.kind]}</span>
+      </div>
       <h2>{node.title}</h2>
-      <p>{node.kind} · {node.executionState}</p>
-      <div className="callout">Parent Done: <b>{node.completionDepth === 'parent_done' ? 'Yes' : 'No'}</b></div>
+      <p>{node.blocker ?? node.nextAction ?? node.statusReason}</p>
 
       <section className="detail-section">
-        <h3>Work identity</h3>
-        <div className="kv"><span>Parent</span><b>{parentLabel}</b></div>
-        <div className="kv"><span>Child/current task</span><b>{node.childScope ?? node.title}</b></div>
-        <div className="kv"><span>Executor lane</span><b>{node.executorLane}</b></div>
-        <div className="kv"><span>Next/blocker</span><b>{node.blocker ?? node.nextAction ?? 'unknown/provisional'}</b></div>
+        <h3>Work</h3>
+        <div className="kv"><span>Parent</span><b>{parentLabel(node)}</b></div>
+        <div className="kv"><span>Executor</span><b>{node.executorLane}</b></div>
+        <div className="kv"><span>State</span><b>{node.executionState}</b></div>
+        <div className="kv"><span>Parent done</span><b>{node.completionDepth === 'parent_done' ? 'yes' : 'no'}</b></div>
       </section>
 
       <section className="detail-section">
         <h3>Evidence</h3>
-        {node.evidenceLinks.map((link) => (
+        {node.evidenceLinks.length > 0 ? node.evidenceLinks.map((link) => (
           <div className="source-row" key={`${link.label}-${link.localPath ?? link.url ?? link.kind}`}>
             <b>{link.label}</b>
-            <small>{link.kind} · {link.redacted ? 'redacted' : 'not redacted'}</small>
+            <small>{link.kind}{link.redacted ? ' · redacted' : ''}</small>
           </div>
-        ))}
+        )) : <p>None recorded.</p>}
       </section>
 
       <section className="detail-section">
-        <h3>Source states</h3>
+        <h3>Sources</h3>
         {node.sourceStates.map((source) => (
           <div className="source-row" key={`${source.source}-${source.state}`}>
             <b>{source.source}: {source.state}</b>
-            <small>{source.confidence} · {source.details}</small>
+            <small>{source.confidence}</small>
           </div>
         ))}
       </section>
 
       <section className="detail-section">
-        <h3>Conflicts / residue / gates</h3>
+        <h3>Open items</h3>
         <ul>
           {node.conflicts.map((conflict) => <li key={conflict.summary}>{conflict.summary}</li>)}
-          <li>Residue: {node.residueState.summary}</li>
-          {node.approvalGates.map((gate) => <li key={gate.label}>{gate.label}: {gate.status}</li>)}
+          {node.residueState.hasResidue ? <li>{node.residueState.summary}</li> : null}
+          {node.approvalGates.filter((gate) => gate.status !== 'not_applicable').map((gate) => <li key={gate.label}>{gate.label}: {gate.status}</li>)}
+          {node.conflicts.length === 0 && !node.residueState.hasResidue && node.approvalGates.length === 0 ? <li>None</li> : null}
         </ul>
       </section>
-
-      {node.realSource ? (
-        <section className="detail-section real-source">
-          <h3>Real source allowlist</h3>
-          <p><b>{node.realSource.sourceName}</b></p>
-          <p>{node.realSource.allowlistedPath}</p>
-          <p>{node.realSource.redaction}</p>
-        </section>
-      ) : null}
     </aside>
   );
 }
