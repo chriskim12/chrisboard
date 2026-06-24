@@ -1,0 +1,161 @@
+import type { WorkNode } from '../domain/worknode';
+
+const baseResidue = { hasResidue: false, summary: 'No known residue', items: [] as string[] };
+const noWriteGates = [
+  {
+    label: 'Mutation/control-plane approval',
+    requiredBefore: 'Any task write, external write, dispatch, PR, deploy, DNS, gateway, env, secret, provider, or production change',
+    status: 'not_requested' as const,
+  },
+];
+
+export const mockWorkNodes: WorkNode[] = [
+  {
+    id: 'mock-parent-dashboard',
+    kind: 'ParentGoal',
+    title: 'Chrisboard dashboard proof',
+    canonicalStatus: 'DOING',
+    statusReason: 'Parent proof is active; child UI direction is done but real-source proof remains required.',
+    completionDepth: 'parent_partial',
+    executorLane: 'Hermes direct',
+    executionState: 'running',
+    nextAction: 'Finish read-only real WorkNode display and verification.',
+    evidenceLinks: [
+      { label: 'Approved RALPLAN', kind: 'plan', localPath: '/home/ubuntu/.hermes/omh/task-management-dashboard/plans/2026-06-24-chrisboard-v1-readonly-proof.md', redacted: true },
+    ],
+    approvalGates: noWriteGates,
+    residueState: baseResidue,
+    sourceStates: [
+      { source: 'Plan', state: 'execution approved for local-only proof', confidence: 'high', details: 'Boundary imported from approved Ultragoal prompt and RALPLAN.' },
+      { source: 'Repo', state: 'implementation in progress', confidence: 'high', details: 'Local repo contains Vite/React/TypeScript proof files.' },
+    ],
+    conflicts: [],
+    updatedAt: '2026-06-24T08:42:28.203Z',
+  },
+  {
+    id: 'mock-child-ui',
+    kind: 'ChildWork',
+    title: 'Board UI and status vocabulary',
+    parentGoalId: 'mock-parent-dashboard',
+    parentGoalTitle: 'Chrisboard dashboard proof',
+    childScope: 'Render TRIAGE/TODO/DOING/WAITING/REVIEW/DONE/RESIDUE lanes and detail fields.',
+    canonicalStatus: 'DONE',
+    statusReason: 'Mock v4 direction exists and all statuses are represented in the local proof.',
+    completionDepth: 'child_done',
+    executorLane: 'GJC delegated',
+    executionState: 'completed',
+    evidenceLinks: [
+      { label: 'Mock baseline HTML', kind: 'artifact', localPath: '/home/ubuntu/.hermes/omh/task-management-dashboard/mockups/chrisboard-v4-triage-todo/index.html', redacted: true },
+    ],
+    approvalGates: noWriteGates,
+    residueState: baseResidue,
+    sourceStates: [
+      { source: 'Spec', state: 'mock-first UX proof required', confidence: 'high', details: 'Spec v1 proof slice requires sample WorkNodes and board/detail drawer.' },
+      { source: 'Repo', state: 'child complete', confidence: 'medium', details: 'UI is present locally; parent proof remains incomplete until real-source verification passes.' },
+    ],
+    conflicts: [],
+  },
+  {
+    id: 'mock-standalone-review',
+    kind: 'StandaloneTask',
+    title: 'Review stale PR status',
+    canonicalStatus: 'TRIAGE',
+    statusReason: 'Standalone task is intentionally not forced under a fake parent.',
+    completionDepth: 'unknown',
+    executorLane: 'unknown',
+    executionState: 'unknown',
+    nextAction: 'Correlate evidence before assigning a parent or executor lane.',
+    evidenceLinks: [
+      { label: 'Spec standalone requirement', kind: 'spec', localPath: '/home/ubuntu/.hermes/omh/task-management-dashboard/specs/deep-interview-task-management-dashboard.md', redacted: true },
+    ],
+    approvalGates: noWriteGates,
+    residueState: baseResidue,
+    sourceStates: [
+      { source: 'Spec', state: 'standalone first-class', confidence: 'high', details: 'Standalone tasks must not disappear or become fake children.' },
+    ],
+    conflicts: [],
+  },
+  {
+    id: 'mock-waiting-domain',
+    kind: 'ParentGoal',
+    title: 'Future dashboard domain/auth',
+    canonicalStatus: 'WAITING',
+    statusReason: 'Public URL, DNS, auth, proxy, and deploy work are future approval gates.',
+    completionDepth: 'unknown',
+    executorLane: 'unknown',
+    executionState: 'blocked',
+    blocker: 'Needs separate Chris approval before any DNS/auth/deploy/gateway work.',
+    evidenceLinks: [
+      { label: 'Decision boundaries', kind: 'spec', localPath: '/home/ubuntu/.hermes/omh/task-management-dashboard/specs/deep-interview-task-management-dashboard.md', redacted: true },
+    ],
+    approvalGates: [
+      ...noWriteGates,
+      { label: 'Public URL deployment', requiredBefore: 'DNS/auth/proxy/deploy/gateway work', status: 'not_requested' as const },
+    ],
+    residueState: baseResidue,
+    sourceStates: [
+      { source: 'Spec', state: 'future gated', confidence: 'high', details: 'Longer-term target URL exists, but no public exposure is authorized.' },
+    ],
+    conflicts: [{ kind: 'approval_required', summary: 'Domain/auth/deploy is intentionally absent from v1.', sources: ['Spec', 'Plan'] }],
+  },
+  {
+    id: 'mock-review-analytics',
+    kind: 'ParentGoal',
+    title: 'PostHog analytics reconciliation',
+    canonicalStatus: 'REVIEW',
+    statusReason: 'Review-ready example with parent acceptance not proven by child completion alone.',
+    completionDepth: 'parent_partial',
+    executorLane: 'GJC delegated',
+    executionState: 'completed',
+    nextAction: 'Check parent acceptance evidence before marking parent Done.',
+    evidenceLinks: [
+      { label: 'Example review receipt', kind: 'receipt', localPath: '.gjc/ultragoal/artifacts/example-review-redacted.txt', redacted: true },
+    ],
+    approvalGates: noWriteGates,
+    residueState: { hasResidue: true, summary: 'PR/review residue remains', items: ['review follow-up', 'evidence readback'] },
+    sourceStates: [
+      { source: 'PR', state: 'review-ready', confidence: 'medium', details: 'Mock source says review-ready.' },
+      { source: 'tests', state: 'parent proof missing', confidence: 'medium', details: 'Mock tests source does not prove parent acceptance.' },
+    ],
+    conflicts: [{ kind: 'evidence_missing', summary: 'Review state is not the same as parent Done.', sources: ['PR', 'tests'] }],
+  },
+  {
+    id: 'mock-done-lifecycle',
+    kind: 'ParentGoal',
+    title: 'Lifecycle smoke',
+    canonicalStatus: 'DONE',
+    statusReason: 'Example parent has explicit parent verified source evidence.',
+    completionDepth: 'parent_done',
+    executorLane: 'Hermes direct',
+    executionState: 'completed',
+    evidenceLinks: [
+      { label: 'Parent verification receipt', kind: 'receipt', localPath: '.gjc/ultragoal/artifacts/example-parent-verified-redacted.txt', redacted: true },
+    ],
+    approvalGates: noWriteGates,
+    residueState: baseResidue,
+    sourceStates: [
+      { source: 'tests', state: 'parent verified', confidence: 'high', details: 'Mock parent acceptance evidence is explicit.' },
+    ],
+    conflicts: [],
+  },
+  {
+    id: 'mock-residue-cleanup',
+    kind: 'StandaloneTask',
+    title: 'Clean temp worktree residue',
+    canonicalStatus: 'RESIDUE',
+    statusReason: 'Work is otherwise closed, but cleanup evidence remains visible.',
+    completionDepth: 'unknown',
+    executorLane: 'other',
+    executionState: 'stale',
+    nextAction: 'Verify cleanup under a separate safe local cleanup approval.',
+    evidenceLinks: [
+      { label: 'Residue checklist example', kind: 'artifact', localPath: '.gjc/ultragoal/artifacts/example-residue-redacted.txt', redacted: true },
+    ],
+    approvalGates: noWriteGates,
+    residueState: { hasResidue: true, summary: 'Temporary worktree residue', items: ['worktree path', 'tmp artifact'] },
+    sourceStates: [
+      { source: 'Git', state: 'residue present', confidence: 'medium', details: 'Mock git/residue source reports leftover local artifacts.' },
+    ],
+    conflicts: [{ kind: 'residue_present', summary: 'Residue is tracked separately from task completion.', sources: ['Git'] }],
+  },
+];
