@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, statSync } from 'node:fs';
 import { assertAllowedSourcePath, sourcePathLabel, OMH_ROOT, TRIAGE_INBOX } from './pathAllowlist.mjs';
 import { createObservation } from './sourceObservation.mjs';
 
@@ -29,17 +29,18 @@ export function readOmhObservations(anchor, observedAt = new Date().toISOString(
           summary: `Allowlisted OMH source is missing: ${label}`,
         })];
       }
-      const text = readFileSync(sourcePath, 'utf8');
+      const stat = statSync(sourcePath);
+      const text = stat.isDirectory() ? '' : readFileSync(sourcePath, 'utf8');
       const observations = [createObservation({
         ...base,
         id: `${anchor.id}:omh:present:${label}`,
-        observationType: 'plan_present',
+        observationType: stat.isDirectory() ? 'artifact_present' : 'plan_present',
         strength: 'medium',
         confidence: 'high',
         summary: `Allowlisted OMH evidence is present: ${label}`,
-        metadata: { byteLength: Buffer.byteLength(text) },
+        metadata: { byteLength: Buffer.byteLength(text), kind: stat.isDirectory() ? 'directory' : 'file' },
       })];
-      if (text.includes('execution_approved') || text.includes('execution approval') || text.includes('approved_ceiling')) {
+      if (!stat.isDirectory() && (text.includes('execution_approved') || text.includes('execution approval') || text.includes('approved_ceiling'))) {
         observations.push(createObservation({
           ...base,
           id: `${anchor.id}:omh:approval-boundary:${label}`,

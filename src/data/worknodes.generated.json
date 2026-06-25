@@ -1,5 +1,513 @@
 [
   {
+    "id": "cb-generated-pipeline",
+    "kind": "ChildWork",
+    "title": "Generated WorkNode pipeline",
+    "parentGoalId": "cb-source-read-model-proof",
+    "parentGoalTitle": "Chrisboard source-backed read model proof",
+    "canonicalStatus": "RESIDUE",
+    "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "stale",
+    "nextAction": "Clear residue before any DONE claim: Local branch has unpushed commits.",
+    "evidenceLinks": [
+      {
+        "label": "Git worktree is clean.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      },
+      {
+        "label": "Work is on the main local integration branch, but final proof is still separate.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      },
+      {
+        "label": "Local branch has unpushed commits.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": true,
+      "summary": "Local branch has unpushed commits.",
+      "items": [
+        "Local branch has unpushed commits."
+      ]
+    },
+    "sourceStates": [
+      {
+        "source": "Git",
+        "state": "git_clean",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Git worktree is clean."
+      },
+      {
+        "source": "Git",
+        "state": "git_landed",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "medium",
+        "details": "Work is on the main local integration branch, but final proof is still separate."
+      },
+      {
+        "source": "Git",
+        "state": "git_unpushed",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Local branch has unpushed commits."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "repo:."
+      ],
+      "observationCount": 3,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "RESIDUE",
+      "winningRule": "residue_or_dirty_local_state",
+      "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
+      "suppressedRules": [
+        "landed_without_final_contract_proof"
+      ],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "medium",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "Git:repo:."
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "cb-generated-pipeline",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "cb-generated-pipeline",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "Git:repo:.",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "generated artifacts",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Node generator",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "reconciler",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Generated WorkNode pipeline",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Generated source-backed read model",
+      "allowlistedPath": "repo:.",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "cb-generated-pipeline",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed ChildWork projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Child work has source-backed final proof or verifier receipt.",
+        "Child work has no unresolved residue, conflict, stale source, reader error, or approval blocker.",
+        "Parent goal acceptance remains separate and is not inferred from this child."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
+    "id": "cb-live-adapters-backlog",
+    "kind": "StandaloneTask",
+    "title": "Future live adapters backlog",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review discovered source/plan evidence and map it to an approved goal contract.",
+    "evidenceLinks": [
+      {
+        "label": "OMH evidence records an approval boundary: omh:specs/configured",
+        "kind": "artifact",
+        "localPath": "omh:specs/configured",
+        "redacted": true
+      },
+      {
+        "label": "Allowlisted OMH evidence is present: omh:specs/configured",
+        "kind": "artifact",
+        "localPath": "omh:specs/configured",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [
+      {
+        "label": "Execution/control boundary",
+        "requiredBefore": "OMH evidence records an approval boundary: omh:specs/configured",
+        "status": "not_requested"
+      }
+    ],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "OMH",
+        "state": "approval_boundary",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "OMH evidence records an approval boundary: omh:specs/configured"
+      },
+      {
+        "source": "OMH",
+        "state": "plan_present",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Allowlisted OMH evidence is present: omh:specs/configured"
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "OMH"
+      ],
+      "redactedPathLabels": [
+        "omh:specs/configured"
+      ],
+      "observationCount": 2,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "TODO",
+      "winningRule": "allowlisted_source_or_plan_present",
+      "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "OMH:omh:specs/configured"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "cb-live-adapters-backlog",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "cb-live-adapters-backlog",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "OMH:omh:specs/configured",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "future adapter scope in confirmed spec",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Future live adapters backlog",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Generated source-backed read model",
+      "allowlistedPath": "omh:specs/configured",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "cb-live-adapters-backlog",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Standalone task has source-backed final proof or explicit triage disposition.",
+        "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
+    "id": "cb-readonly-boundary",
+    "kind": "ChildWork",
+    "title": "Read-only adapter and UI boundary",
+    "parentGoalId": "cb-source-read-model-proof",
+    "parentGoalTitle": "Chrisboard source-backed read model proof",
+    "canonicalStatus": "RESIDUE",
+    "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "stale",
+    "nextAction": "Clear residue before any DONE claim: Local branch has unpushed commits.",
+    "evidenceLinks": [
+      {
+        "label": "Git worktree is clean.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      },
+      {
+        "label": "Work is on the main local integration branch, but final proof is still separate.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      },
+      {
+        "label": "Local branch has unpushed commits.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": true,
+      "summary": "Local branch has unpushed commits.",
+      "items": [
+        "Local branch has unpushed commits."
+      ]
+    },
+    "sourceStates": [
+      {
+        "source": "Git",
+        "state": "git_clean",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Git worktree is clean."
+      },
+      {
+        "source": "Git",
+        "state": "git_landed",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "medium",
+        "details": "Work is on the main local integration branch, but final proof is still separate."
+      },
+      {
+        "source": "Git",
+        "state": "git_unpushed",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Local branch has unpushed commits."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "repo:."
+      ],
+      "observationCount": 3,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "RESIDUE",
+      "winningRule": "residue_or_dirty_local_state",
+      "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
+      "suppressedRules": [
+        "landed_without_final_contract_proof"
+      ],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "medium",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "Git:repo:."
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "cb-readonly-boundary",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "cb-readonly-boundary",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "Git:repo:.",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "adapter verifier",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "React read-only UI",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Read-only adapter and UI boundary",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Generated source-backed read model",
+      "allowlistedPath": "repo:.",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "cb-readonly-boundary",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed ChildWork projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Child work has source-backed final proof or verifier receipt.",
+        "Child work has no unresolved residue, conflict, stale source, reader error, or approval blocker.",
+        "Parent goal acceptance remains separate and is not inferred from this child."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
     "id": "cb-source-read-model-proof",
     "kind": "ParentGoal",
     "title": "Chrisboard source-backed read model proof",
@@ -12,12 +520,24 @@
     },
     "executorLane": "unknown",
     "executionState": "stale",
-    "nextAction": "Review source evidence and resolve the next conservative gate.",
+    "nextAction": "Clear residue before any DONE claim: Local branch has unpushed commits.",
     "evidenceLinks": [
       {
-        "label": "Allowlisted OMH evidence is present: omh:plans/configured",
-        "kind": "artifact",
-        "localPath": "omh:plans/configured",
+        "label": "Git worktree is clean.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      },
+      {
+        "label": "Work is on the main local integration branch, but final proof is still separate.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      },
+      {
+        "label": "Local branch has unpushed commits.",
+        "kind": "repo",
+        "localPath": "repo:.",
         "redacted": true
       },
       {
@@ -27,21 +547,15 @@
         "redacted": true
       },
       {
-        "label": "Allowlisted OMH evidence is present: omh:specs/configured",
-        "kind": "artifact",
-        "localPath": "omh:specs/configured",
-        "redacted": true
-      },
-      {
         "label": "OMH evidence records an approval boundary: omh:specs/configured",
         "kind": "artifact",
         "localPath": "omh:specs/configured",
         "redacted": true
       },
       {
-        "label": "Git worktree has 17 changed path(s).",
-        "kind": "repo",
-        "localPath": "repo:.",
+        "label": "Allowlisted OMH evidence is present: omh:plans/configured",
+        "kind": "artifact",
+        "localPath": "omh:plans/configured",
         "redacted": true
       }
     ],
@@ -59,300 +573,198 @@
     ],
     "residueState": {
       "hasResidue": true,
-      "summary": "Git worktree has 17 changed path(s).",
+      "summary": "Local branch has unpushed commits.",
       "items": [
-        "Git worktree has 17 changed path(s)."
+        "Local branch has unpushed commits."
       ]
     },
     "sourceStates": [
       {
-        "source": "OMH",
-        "state": "plan_present",
-        "observedAt": "2026-06-25T11:54:05.561Z",
+        "source": "Git",
+        "state": "git_clean",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
-        "details": "Allowlisted OMH evidence is present: omh:plans/configured"
+        "details": "Git worktree is clean."
+      },
+      {
+        "source": "Git",
+        "state": "git_landed",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "medium",
+        "details": "Work is on the main local integration branch, but final proof is still separate."
+      },
+      {
+        "source": "Git",
+        "state": "git_unpushed",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Local branch has unpushed commits."
       },
       {
         "source": "OMH",
         "state": "approval_boundary",
-        "observedAt": "2026-06-25T11:54:05.561Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "OMH evidence records an approval boundary: omh:plans/configured"
       },
       {
         "source": "OMH",
-        "state": "plan_present",
-        "observedAt": "2026-06-25T11:54:05.561Z",
-        "confidence": "high",
-        "details": "Allowlisted OMH evidence is present: omh:specs/configured"
-      },
-      {
-        "source": "OMH",
         "state": "approval_boundary",
-        "observedAt": "2026-06-25T11:54:05.561Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "OMH evidence records an approval boundary: omh:specs/configured"
       },
       {
-        "source": "Git",
-        "state": "git_dirty",
-        "observedAt": "2026-06-25T11:54:05.561Z",
+        "source": "OMH",
+        "state": "plan_present",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
-        "details": "Git worktree has 17 changed path(s)."
-      }
-    ],
-    "conflicts": [],
-    "updatedAt": "2026-06-25T11:54:05.561Z",
-    "browserProvenance": {
-      "sourceKinds": [
-        "OMH",
-        "Git"
-      ],
-      "redactedPathLabels": [
-        "omh:plans/configured",
-        "omh:specs/configured",
-        "repo:."
-      ],
-      "observationCount": 5,
-      "redaction": "redacted"
-    },
-    "realSource": {
-      "sourceName": "Generated source-backed read model",
-      "allowlistedPath": "omh:plans/configured, omh:specs/configured, repo:.",
-      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
-    }
-  },
-  {
-    "id": "cb-live-adapters-backlog",
-    "kind": "StandaloneTask",
-    "title": "Future live adapters backlog",
-    "canonicalStatus": "TODO",
-    "statusReason": "Allowlisted plan/spec evidence exists, but execution/final proof is not established.",
-    "completionDepth": "unknown",
-    "executorLane": "unknown",
-    "executionState": "unknown",
-    "nextAction": "Review source evidence and resolve the next conservative gate.",
-    "evidenceLinks": [
-      {
-        "label": "Allowlisted OMH evidence is present: omh:specs/configured",
-        "kind": "artifact",
-        "localPath": "omh:specs/configured",
-        "redacted": true
+        "details": "Allowlisted OMH evidence is present: omh:plans/configured"
       },
-      {
-        "label": "OMH evidence records an approval boundary: omh:specs/configured",
-        "kind": "artifact",
-        "localPath": "omh:specs/configured",
-        "redacted": true
-      }
-    ],
-    "approvalGates": [
-      {
-        "label": "Execution/control boundary",
-        "requiredBefore": "OMH evidence records an approval boundary: omh:specs/configured",
-        "status": "not_requested"
-      }
-    ],
-    "residueState": {
-      "hasResidue": false,
-      "summary": "No residue evidence selected by reconciler.",
-      "items": []
-    },
-    "sourceStates": [
       {
         "source": "OMH",
         "state": "plan_present",
-        "observedAt": "2026-06-25T11:54:05.561Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Allowlisted OMH evidence is present: omh:specs/configured"
-      },
-      {
-        "source": "OMH",
-        "state": "approval_boundary",
-        "observedAt": "2026-06-25T11:54:05.561Z",
-        "confidence": "high",
-        "details": "OMH evidence records an approval boundary: omh:specs/configured"
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T11:54:05.561Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
+        "Git",
         "OMH"
       ],
       "redactedPathLabels": [
+        "repo:.",
+        "omh:plans/configured",
         "omh:specs/configured"
       ],
-      "observationCount": 2,
+      "observationCount": 7,
       "redaction": "redacted"
     },
-    "realSource": {
-      "sourceName": "Generated source-backed read model",
-      "allowlistedPath": "omh:specs/configured",
-      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
-    }
-  },
-  {
-    "id": "cb-ultragoal-execution",
-    "kind": "ChildWork",
-    "title": "Current Ultragoal execution lane",
-    "parentGoalId": "cb-source-read-model-proof",
-    "parentGoalTitle": "Chrisboard source-backed read model proof",
-    "canonicalStatus": "RUNNING",
-    "statusReason": "Fresh explicit execution evidence is present.",
-    "completionDepth": "unknown",
-    "executorLane": "GJC delegated",
-    "executionState": "running",
-    "nextAction": "Review source evidence and resolve the next conservative gate.",
-    "evidenceLinks": [
-      {
-        "label": "Hermes Ultragoal run root is present for current execution.",
-        "kind": "artifact",
-        "localPath": "hermes-goal-run:redacted",
-        "redacted": true
-      }
-    ],
-    "approvalGates": [],
-    "residueState": {
-      "hasResidue": false,
-      "summary": "No residue evidence selected by reconciler.",
-      "items": []
-    },
-    "sourceStates": [
-      {
-        "source": "GJC",
-        "state": "execution_active",
-        "observedAt": "2026-06-25T11:54:05.561Z",
-        "confidence": "high",
-        "details": "Hermes Ultragoal run root is present for current execution."
-      }
-    ],
-    "conflicts": [],
-    "updatedAt": "2026-06-25T11:54:05.561Z",
-    "browserProvenance": {
-      "sourceKinds": [
-        "GJC"
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "RESIDUE",
+      "winningRule": "residue_or_dirty_local_state",
+      "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
+      "suppressedRules": [
+        "landed_without_final_contract_proof",
+        "allowlisted_source_or_plan_present"
       ],
-      "redactedPathLabels": [
-        "hermes-goal-run:redacted"
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence",
+        "parent acceptance evidence"
       ],
-      "observationCount": 1,
-      "redaction": "redacted"
+      "conflicts": [],
+      "confidence": "medium",
+      "freshness": "fresh"
     },
-    "realSource": {
-      "sourceName": "Generated source-backed read model",
-      "allowlistedPath": "hermes-goal-run:redacted",
-      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
-    }
-  },
-  {
-    "id": "cb-generated-pipeline",
-    "kind": "ChildWork",
-    "title": "Generated WorkNode pipeline",
-    "parentGoalId": "cb-source-read-model-proof",
-    "parentGoalTitle": "Chrisboard source-backed read model proof",
-    "canonicalStatus": "RESIDUE",
-    "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
-    "completionDepth": "unknown",
-    "executorLane": "unknown",
-    "executionState": "stale",
-    "nextAction": "Review source evidence and resolve the next conservative gate.",
-    "evidenceLinks": [
-      {
-        "label": "Git worktree has 17 changed path(s).",
-        "kind": "repo",
-        "localPath": "repo:.",
-        "redacted": true
-      }
-    ],
-    "approvalGates": [],
-    "residueState": {
-      "hasResidue": true,
-      "summary": "Git worktree has 17 changed path(s).",
-      "items": [
-        "Git worktree has 17 changed path(s)."
+    "identityMapping": {
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "Git:repo:.",
+        "OMH:omh:plans/configured",
+        "OMH:omh:specs/configured"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "cb-source-read-model-proof",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "cb-source-read-model-proof",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "Git:repo:.",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "OMH:omh:plans/configured",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "OMH:omh:specs/configured",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "approved RALPLAN",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "confirmed spec",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Chrisboard source-backed read model proof",
+          "confidence": "high"
+        }
       ]
     },
-    "sourceStates": [
-      {
-        "source": "Git",
-        "state": "git_dirty",
-        "observedAt": "2026-06-25T11:54:05.561Z",
-        "confidence": "high",
-        "details": "Git worktree has 17 changed path(s)."
-      }
-    ],
-    "conflicts": [],
-    "updatedAt": "2026-06-25T11:54:05.561Z",
-    "browserProvenance": {
-      "sourceKinds": [
-        "Git"
-      ],
-      "redactedPathLabels": [
-        "repo:."
-      ],
-      "observationCount": 1,
-      "redaction": "redacted"
-    },
     "realSource": {
       "sourceName": "Generated source-backed read model",
-      "allowlistedPath": "repo:.",
+      "allowlistedPath": "repo:., omh:plans/configured, omh:specs/configured",
       "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
-    }
-  },
-  {
-    "id": "cb-readonly-boundary",
-    "kind": "ChildWork",
-    "title": "Read-only adapter and UI boundary",
-    "parentGoalId": "cb-source-read-model-proof",
-    "parentGoalTitle": "Chrisboard source-backed read model proof",
-    "canonicalStatus": "RESIDUE",
-    "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
-    "completionDepth": "unknown",
-    "executorLane": "unknown",
-    "executionState": "stale",
-    "nextAction": "Review source evidence and resolve the next conservative gate.",
-    "evidenceLinks": [
-      {
-        "label": "Git worktree has 17 changed path(s).",
-        "kind": "repo",
-        "localPath": "repo:.",
-        "redacted": true
-      }
-    ],
-    "approvalGates": [],
-    "residueState": {
-      "hasResidue": true,
-      "summary": "Git worktree has 17 changed path(s).",
-      "items": [
-        "Git worktree has 17 changed path(s)."
-      ]
     },
-    "sourceStates": [
-      {
-        "source": "Git",
-        "state": "git_dirty",
-        "observedAt": "2026-06-25T11:54:05.561Z",
-        "confidence": "high",
-        "details": "Git worktree has 17 changed path(s)."
-      }
-    ],
-    "conflicts": [],
-    "updatedAt": "2026-06-25T11:54:05.561Z",
-    "browserProvenance": {
-      "sourceKinds": [
-        "Git"
+    "goalContract": {
+      "canonicalId": "cb-source-read-model-proof",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Local source edits, generated artifacts, tests/build/readonly verification, commit/push/deploy where configured credentials permit; UI remains read-only and source systems retain raw evidence. Completion standard: Chris can open Chrisboard and, within 30 seconds, know what needs intervention, which work is running/blocked/review-ready/residue/stale/conflicting, why that judgment was made, what evidence supports it, what original parent goal is at stake, and what the next safe action is. The board must avoid manual status truth and must distinguish child completion, landed changes, final Done, and residue.",
+      "doneCriteria": [
+        "Observation-backed source ingestion exists for the approved source inventory.",
+        "WorkNode identity graph maps aliases/source traces to canonical work nodes.",
+        "Goal contracts capture original goal, Done criteria, approval gates, and scope reductions.",
+        "Reconciliation policy derives canonical status from observations and contracts with explainable decision traces.",
+        "Parent/child hierarchy prevents child Done from becoming parent Done without parent acceptance evidence.",
+        "Residue, conflict, freshness, and approval gates are first-class and visible.",
+        "UI remains read-only and focuses on Needs Chris / intervention queue first.",
+        "Refresh/publish lifecycle prevents stale generated artifacts from masquerading as live truth."
       ],
-      "redactedPathLabels": [
-        "repo:."
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
       ],
-      "observationCount": 1,
-      "redaction": "redacted"
-    },
-    "realSource": {
-      "sourceName": "Generated source-backed read model",
-      "allowlistedPath": "repo:.",
-      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Parent acceptance evidence",
+          "requiredBefore": "Final DONE for the parent WorkNode operational SSOT outcome.",
+          "status": "pending"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved scope reduction is recorded; prior first-envelope work is accounting/progress only and the full parent objective remains expected.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": true
     }
   },
   {
@@ -360,7 +772,7 @@
     "kind": "StandaloneTask",
     "title": "TRIAGE inbox capture contract",
     "canonicalStatus": "REVIEW",
-    "statusReason": "Output or self-report evidence exists and needs verifier or human review.",
+    "statusReason": "Output, self-report, conflict, or mapping evidence needs verifier or human review.",
     "completionDepth": "unknown",
     "discordThread": {
       "label": "Thread/session anchor",
@@ -368,7 +780,7 @@
     },
     "executorLane": "unknown",
     "executionState": "unknown",
-    "nextAction": "Review source evidence and resolve the next conservative gate.",
+    "nextAction": "Independently verify the output evidence and record final proof if accepted.",
     "evidenceLinks": [
       {
         "label": "TRIAGE inbox contract is readable with 1 contract-valid item(s).",
@@ -387,13 +799,13 @@
       {
         "source": "HermesTriage",
         "state": "artifact_present",
-        "observedAt": "2026-06-25T11:54:05.561Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "TRIAGE inbox contract is readable with 1 contract-valid item(s)."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T11:54:05.561Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "HermesTriage"
@@ -404,18 +816,2131 @@
       "observationCount": 1,
       "redaction": "redacted"
     },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "REVIEW",
+      "winningRule": "reviewable_output_or_self_report",
+      "statusReason": "Output, self-report, conflict, or mapping evidence needs verifier or human review.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "HermesTriage:omh:triage-inbox"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "cb-triage-capture-contract",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "cb-triage-capture-contract",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "HermesTriage:omh:triage-inbox",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Hermes-local JSONL inbox",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Node-only reader",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "writer contract fixture",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "TRIAGE inbox capture contract",
+          "confidence": "high"
+        }
+      ]
+    },
     "realSource": {
       "sourceName": "Generated source-backed read model",
       "allowlistedPath": "omh:triage-inbox",
       "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "cb-triage-capture-contract",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Standalone task has source-backed final proof or explicit triage disposition.",
+        "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
+    "id": "cb-ultragoal-execution",
+    "kind": "ChildWork",
+    "title": "Current Ultragoal execution lane",
+    "parentGoalId": "cb-source-read-model-proof",
+    "parentGoalTitle": "Chrisboard source-backed read model proof",
+    "canonicalStatus": "RUNNING",
+    "statusReason": "Fresh explicit execution evidence is present.",
+    "completionDepth": "unknown",
+    "executorLane": "GJC delegated",
+    "executionState": "running",
+    "nextAction": "Monitor execution evidence and wait for verifier output.",
+    "evidenceLinks": [
+      {
+        "label": "Hermes Ultragoal run root is present for current execution.",
+        "kind": "artifact",
+        "localPath": "hermes-goal-run:redacted",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "GJC",
+        "state": "execution_active",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Hermes Ultragoal run root is present for current execution."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "GJC"
+      ],
+      "redactedPathLabels": [
+        "hermes-goal-run:redacted"
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "RUNNING",
+      "winningRule": "fresh_execution_evidence",
+      "statusReason": "Fresh explicit execution evidence is present.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "GJC:hermes-goal-run:redacted"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "cb-ultragoal-execution",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "cb-ultragoal-execution",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "GJC:hermes-goal-run:redacted",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Hermes Ultragoal run root",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Current Ultragoal execution lane",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Generated source-backed read model",
+      "allowlistedPath": "hermes-goal-run:redacted",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "cb-ultragoal-execution",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed ChildWork projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Child work has source-backed final proof or verifier receipt.",
+        "Child work has no unresolved residue, conflict, stale source, reader error, or approval blocker.",
+        "Parent goal acceptance remains separate and is not inferred from this child."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
+    "id": "discovered-gjc-state-3291444abaad",
+    "kind": "ParentGoal",
+    "title": "Repo-local GJC state",
+    "canonicalStatus": "REVIEW",
+    "statusReason": "Output, self-report, conflict, or mapping evidence needs verifier or human review.",
+    "completionDepth": "unknown",
+    "executorLane": "GJC delegated",
+    "executionState": "unknown",
+    "nextAction": "Independently verify the output evidence and record final proof if accepted.",
+    "evidenceLinks": [
+      {
+        "label": "Allowlisted GJC artifact is present: repo:.gjc/",
+        "kind": "artifact",
+        "localPath": "repo:.gjc/",
+        "redacted": true
+      },
+      {
+        "label": "Approved source inventory discovered Repo-local GJC state.",
+        "kind": "artifact",
+        "localPath": "repo:.gjc/",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "GJC",
+        "state": "artifact_present",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Allowlisted GJC artifact is present: repo:.gjc/"
+      },
+      {
+        "source": "GJC",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Repo-local GJC state."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "GJC"
+      ],
+      "redactedPathLabels": [
+        "repo:.gjc/"
+      ],
+      "observationCount": 2,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "REVIEW",
+      "winningRule": "reviewable_output_or_self_report",
+      "statusReason": "Output, self-report, conflict, or mapping evidence needs verifier or human review.",
+      "suppressedRules": [
+        "allowlisted_source_or_plan_present"
+      ],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence",
+        "parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "gjc_state:3291444abaad",
+        "GJC:repo:.gjc/"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-gjc-state-3291444abaad",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-gjc-state-3291444abaad",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "gjc_state:3291444abaad",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "GJC:repo:.gjc/",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Repo-local GJC state",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Repo-local GJC state",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "repo:.gjc/",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-gjc-state-3291444abaad",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Local source edits, generated artifacts, tests/build/readonly verification, commit/push/deploy where configured credentials permit; UI remains read-only and source systems retain raw evidence. Completion standard: Chris can open Chrisboard and, within 30 seconds, know what needs intervention, which work is running/blocked/review-ready/residue/stale/conflicting, why that judgment was made, what evidence supports it, what original parent goal is at stake, and what the next safe action is. The board must avoid manual status truth and must distinguish child completion, landed changes, final Done, and residue.",
+      "doneCriteria": [
+        "Observation-backed source ingestion exists for the approved source inventory.",
+        "WorkNode identity graph maps aliases/source traces to canonical work nodes.",
+        "Goal contracts capture original goal, Done criteria, approval gates, and scope reductions.",
+        "Reconciliation policy derives canonical status from observations and contracts with explainable decision traces.",
+        "Parent/child hierarchy prevents child Done from becoming parent Done without parent acceptance evidence.",
+        "Residue, conflict, freshness, and approval gates are first-class and visible.",
+        "UI remains read-only and focuses on Needs Chris / intervention queue first.",
+        "Refresh/publish lifecycle prevents stale generated artifacts from masquerading as live truth."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Parent acceptance evidence",
+          "requiredBefore": "Final DONE for the parent WorkNode operational SSOT outcome.",
+          "status": "pending"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved scope reduction is recorded; prior first-envelope work is accounting/progress only and the full parent objective remains expected.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": true
+    }
+  },
+  {
+    "id": "discovered-hermes-goal-runs-fb4e3a156431",
+    "kind": "ParentGoal",
+    "title": "Hermes local goal/session traces",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+    "completionDepth": "unknown",
+    "executorLane": "Hermes direct",
+    "executionState": "unknown",
+    "nextAction": "Review discovered source/plan evidence and map it to an approved goal contract.",
+    "evidenceLinks": [
+      {
+        "label": "Approved source inventory discovered Hermes local goal/session traces.",
+        "kind": "session",
+        "localPath": "hermes-goal-run:redacted",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "Hermes",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Hermes local goal/session traces."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Hermes"
+      ],
+      "redactedPathLabels": [
+        "hermes-goal-run:redacted"
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "TODO",
+      "winningRule": "allowlisted_source_or_plan_present",
+      "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence",
+        "parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "hermes_goal_runs:fb4e3a156431"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-hermes-goal-runs-fb4e3a156431",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-hermes-goal-runs-fb4e3a156431",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "hermes_goal_runs:fb4e3a156431",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Hermes local goal/session traces",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Hermes local goal/session traces",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "hermes-goal-run:redacted",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-hermes-goal-runs-fb4e3a156431",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Local source edits, generated artifacts, tests/build/readonly verification, commit/push/deploy where configured credentials permit; UI remains read-only and source systems retain raw evidence. Completion standard: Chris can open Chrisboard and, within 30 seconds, know what needs intervention, which work is running/blocked/review-ready/residue/stale/conflicting, why that judgment was made, what evidence supports it, what original parent goal is at stake, and what the next safe action is. The board must avoid manual status truth and must distinguish child completion, landed changes, final Done, and residue.",
+      "doneCriteria": [
+        "Observation-backed source ingestion exists for the approved source inventory.",
+        "WorkNode identity graph maps aliases/source traces to canonical work nodes.",
+        "Goal contracts capture original goal, Done criteria, approval gates, and scope reductions.",
+        "Reconciliation policy derives canonical status from observations and contracts with explainable decision traces.",
+        "Parent/child hierarchy prevents child Done from becoming parent Done without parent acceptance evidence.",
+        "Residue, conflict, freshness, and approval gates are first-class and visible.",
+        "UI remains read-only and focuses on Needs Chris / intervention queue first.",
+        "Refresh/publish lifecycle prevents stale generated artifacts from masquerading as live truth."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Parent acceptance evidence",
+          "requiredBefore": "Final DONE for the parent WorkNode operational SSOT outcome.",
+          "status": "pending"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved scope reduction is recorded; prior first-envelope work is accounting/progress only and the full parent objective remains expected.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": true
+    }
+  },
+  {
+    "id": "discovered-local-repo-1-9a23975b9a63",
+    "kind": "StandaloneTask",
+    "title": "Discovered allowlisted local repo 1",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review discovered source/plan evidence and map it to an approved goal contract.",
+    "evidenceLinks": [
+      {
+        "label": "Approved source inventory discovered Discovered allowlisted local repo 1.",
+        "kind": "repo",
+        "localPath": "local-repo:redacted",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "Git",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Discovered allowlisted local repo 1."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "local-repo:redacted"
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "TODO",
+      "winningRule": "allowlisted_source_or_plan_present",
+      "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_repo_1:9a23975b9a63"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-local-repo-1-9a23975b9a63",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-local-repo-1-9a23975b9a63",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "local_repo_1:9a23975b9a63",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Discovered allowlisted local repo 1",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Discovered allowlisted local repo 1",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "local-repo:redacted",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-local-repo-1-9a23975b9a63",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Standalone task has source-backed final proof or explicit triage disposition.",
+        "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
+    "id": "discovered-local-repo-2-9a23975b9a63",
+    "kind": "StandaloneTask",
+    "title": "Discovered allowlisted local repo 2",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review discovered source/plan evidence and map it to an approved goal contract.",
+    "evidenceLinks": [
+      {
+        "label": "Approved source inventory discovered Discovered allowlisted local repo 2.",
+        "kind": "repo",
+        "localPath": "local-repo:redacted",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "Git",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Discovered allowlisted local repo 2."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "local-repo:redacted"
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "TODO",
+      "winningRule": "allowlisted_source_or_plan_present",
+      "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_repo_2:9a23975b9a63"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-local-repo-2-9a23975b9a63",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-local-repo-2-9a23975b9a63",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "local_repo_2:9a23975b9a63",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Discovered allowlisted local repo 2",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Discovered allowlisted local repo 2",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "local-repo:redacted",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-local-repo-2-9a23975b9a63",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Standalone task has source-backed final proof or explicit triage disposition.",
+        "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
+    "id": "discovered-local-repo-3-9a23975b9a63",
+    "kind": "StandaloneTask",
+    "title": "Discovered allowlisted local repo 3",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review discovered source/plan evidence and map it to an approved goal contract.",
+    "evidenceLinks": [
+      {
+        "label": "Approved source inventory discovered Discovered allowlisted local repo 3.",
+        "kind": "repo",
+        "localPath": "local-repo:redacted",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "Git",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Discovered allowlisted local repo 3."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "local-repo:redacted"
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "TODO",
+      "winningRule": "allowlisted_source_or_plan_present",
+      "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_repo_3:9a23975b9a63"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-local-repo-3-9a23975b9a63",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-local-repo-3-9a23975b9a63",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "local_repo_3:9a23975b9a63",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Discovered allowlisted local repo 3",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Discovered allowlisted local repo 3",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "local-repo:redacted",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-local-repo-3-9a23975b9a63",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Standalone task has source-backed final proof or explicit triage disposition.",
+        "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
+    "id": "discovered-local-repo-4-9a23975b9a63",
+    "kind": "StandaloneTask",
+    "title": "Discovered allowlisted local repo 4",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review discovered source/plan evidence and map it to an approved goal contract.",
+    "evidenceLinks": [
+      {
+        "label": "Approved source inventory discovered Discovered allowlisted local repo 4.",
+        "kind": "repo",
+        "localPath": "local-repo:redacted",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "Git",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Discovered allowlisted local repo 4."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "local-repo:redacted"
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "TODO",
+      "winningRule": "allowlisted_source_or_plan_present",
+      "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_repo_4:9a23975b9a63"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-local-repo-4-9a23975b9a63",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-local-repo-4-9a23975b9a63",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "local_repo_4:9a23975b9a63",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Discovered allowlisted local repo 4",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Discovered allowlisted local repo 4",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "local-repo:redacted",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-local-repo-4-9a23975b9a63",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Standalone task has source-backed final proof or explicit triage disposition.",
+        "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
+    "id": "discovered-local-repo-5-9a23975b9a63",
+    "kind": "StandaloneTask",
+    "title": "Discovered allowlisted local repo 5",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review discovered source/plan evidence and map it to an approved goal contract.",
+    "evidenceLinks": [
+      {
+        "label": "Approved source inventory discovered Discovered allowlisted local repo 5.",
+        "kind": "repo",
+        "localPath": "local-repo:redacted",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "Git",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Discovered allowlisted local repo 5."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "local-repo:redacted"
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "TODO",
+      "winningRule": "allowlisted_source_or_plan_present",
+      "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_repo_5:9a23975b9a63"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-local-repo-5-9a23975b9a63",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-local-repo-5-9a23975b9a63",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "local_repo_5:9a23975b9a63",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Discovered allowlisted local repo 5",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Discovered allowlisted local repo 5",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "local-repo:redacted",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-local-repo-5-9a23975b9a63",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Standalone task has source-backed final proof or explicit triage disposition.",
+        "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
+    "id": "discovered-local-worktree-1-b605823101b3",
+    "kind": "StandaloneTask",
+    "title": "Discovered allowlisted local worktree 1",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review discovered source/plan evidence and map it to an approved goal contract.",
+    "evidenceLinks": [
+      {
+        "label": "Approved source inventory discovered Discovered allowlisted local worktree 1.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "Git",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Discovered allowlisted local worktree 1."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "repo:."
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "TODO",
+      "winningRule": "allowlisted_source_or_plan_present",
+      "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_worktree_1:b605823101b3"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-local-worktree-1-b605823101b3",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-local-worktree-1-b605823101b3",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "local_worktree_1:b605823101b3",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Discovered allowlisted local worktree 1",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Discovered allowlisted local worktree 1",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "repo:.",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-local-worktree-1-b605823101b3",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Standalone task has source-backed final proof or explicit triage disposition.",
+        "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
+    "id": "discovered-local-worktree-2-667a3b689b0e",
+    "kind": "StandaloneTask",
+    "title": "Discovered allowlisted local worktree 2",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review discovered source/plan evidence and map it to an approved goal contract.",
+    "evidenceLinks": [
+      {
+        "label": "Approved source inventory discovered Discovered allowlisted local worktree 2.",
+        "kind": "repo",
+        "localPath": "local-worktree:redacted",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "Git",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Discovered allowlisted local worktree 2."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "local-worktree:redacted"
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "TODO",
+      "winningRule": "allowlisted_source_or_plan_present",
+      "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_worktree_2:667a3b689b0e"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-local-worktree-2-667a3b689b0e",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-local-worktree-2-667a3b689b0e",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "local_worktree_2:667a3b689b0e",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Discovered allowlisted local worktree 2",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Discovered allowlisted local worktree 2",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "local-worktree:redacted",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-local-worktree-2-667a3b689b0e",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Standalone task has source-backed final proof or explicit triage disposition.",
+        "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
+    "id": "discovered-omh-plans-b5844d8fe3ab",
+    "kind": "ParentGoal",
+    "title": "Chrisboard OMH plans",
+    "canonicalStatus": "REVIEW",
+    "statusReason": "Output, self-report, conflict, or mapping evidence needs verifier or human review.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Independently verify the output evidence and record final proof if accepted.",
+    "evidenceLinks": [
+      {
+        "label": "Approved source inventory discovered Chrisboard OMH plans.",
+        "kind": "artifact",
+        "localPath": "omh:plans/configured",
+        "redacted": true
+      },
+      {
+        "label": "Allowlisted OMH evidence is present: omh:plans/configured",
+        "kind": "artifact",
+        "localPath": "omh:plans/configured",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "OMH",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Chrisboard OMH plans."
+      },
+      {
+        "source": "OMH",
+        "state": "artifact_present",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Allowlisted OMH evidence is present: omh:plans/configured"
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "OMH"
+      ],
+      "redactedPathLabels": [
+        "omh:plans/configured"
+      ],
+      "observationCount": 2,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "REVIEW",
+      "winningRule": "reviewable_output_or_self_report",
+      "statusReason": "Output, self-report, conflict, or mapping evidence needs verifier or human review.",
+      "suppressedRules": [
+        "allowlisted_source_or_plan_present"
+      ],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence",
+        "parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "omh_plans:b5844d8fe3ab",
+        "OMH:omh:plans/configured"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-omh-plans-b5844d8fe3ab",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-omh-plans-b5844d8fe3ab",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "omh_plans:b5844d8fe3ab",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "OMH:omh:plans/configured",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Chrisboard OMH plans",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Chrisboard OMH plans",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "omh:plans/configured",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-omh-plans-b5844d8fe3ab",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Local source edits, generated artifacts, tests/build/readonly verification, commit/push/deploy where configured credentials permit; UI remains read-only and source systems retain raw evidence. Completion standard: Chris can open Chrisboard and, within 30 seconds, know what needs intervention, which work is running/blocked/review-ready/residue/stale/conflicting, why that judgment was made, what evidence supports it, what original parent goal is at stake, and what the next safe action is. The board must avoid manual status truth and must distinguish child completion, landed changes, final Done, and residue.",
+      "doneCriteria": [
+        "Observation-backed source ingestion exists for the approved source inventory.",
+        "WorkNode identity graph maps aliases/source traces to canonical work nodes.",
+        "Goal contracts capture original goal, Done criteria, approval gates, and scope reductions.",
+        "Reconciliation policy derives canonical status from observations and contracts with explainable decision traces.",
+        "Parent/child hierarchy prevents child Done from becoming parent Done without parent acceptance evidence.",
+        "Residue, conflict, freshness, and approval gates are first-class and visible.",
+        "UI remains read-only and focuses on Needs Chris / intervention queue first.",
+        "Refresh/publish lifecycle prevents stale generated artifacts from masquerading as live truth."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Parent acceptance evidence",
+          "requiredBefore": "Final DONE for the parent WorkNode operational SSOT outcome.",
+          "status": "pending"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved scope reduction is recorded; prior first-envelope work is accounting/progress only and the full parent objective remains expected.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": true
+    }
+  },
+  {
+    "id": "discovered-omh-specs-593520a80a23",
+    "kind": "ParentGoal",
+    "title": "Chrisboard OMH specs",
+    "canonicalStatus": "REVIEW",
+    "statusReason": "Output, self-report, conflict, or mapping evidence needs verifier or human review.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Independently verify the output evidence and record final proof if accepted.",
+    "evidenceLinks": [
+      {
+        "label": "Approved source inventory discovered Chrisboard OMH specs.",
+        "kind": "artifact",
+        "localPath": "omh:specs/configured",
+        "redacted": true
+      },
+      {
+        "label": "Allowlisted OMH evidence is present: omh:specs/configured",
+        "kind": "artifact",
+        "localPath": "omh:specs/configured",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "OMH",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Chrisboard OMH specs."
+      },
+      {
+        "source": "OMH",
+        "state": "artifact_present",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Allowlisted OMH evidence is present: omh:specs/configured"
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "OMH"
+      ],
+      "redactedPathLabels": [
+        "omh:specs/configured"
+      ],
+      "observationCount": 2,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "REVIEW",
+      "winningRule": "reviewable_output_or_self_report",
+      "statusReason": "Output, self-report, conflict, or mapping evidence needs verifier or human review.",
+      "suppressedRules": [
+        "allowlisted_source_or_plan_present"
+      ],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence",
+        "parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "omh_specs:593520a80a23",
+        "OMH:omh:specs/configured"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-omh-specs-593520a80a23",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-omh-specs-593520a80a23",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "omh_specs:593520a80a23",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "OMH:omh:specs/configured",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Chrisboard OMH specs",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Chrisboard OMH specs",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "omh:specs/configured",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-omh-specs-593520a80a23",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Local source edits, generated artifacts, tests/build/readonly verification, commit/push/deploy where configured credentials permit; UI remains read-only and source systems retain raw evidence. Completion standard: Chris can open Chrisboard and, within 30 seconds, know what needs intervention, which work is running/blocked/review-ready/residue/stale/conflicting, why that judgment was made, what evidence supports it, what original parent goal is at stake, and what the next safe action is. The board must avoid manual status truth and must distinguish child completion, landed changes, final Done, and residue.",
+      "doneCriteria": [
+        "Observation-backed source ingestion exists for the approved source inventory.",
+        "WorkNode identity graph maps aliases/source traces to canonical work nodes.",
+        "Goal contracts capture original goal, Done criteria, approval gates, and scope reductions.",
+        "Reconciliation policy derives canonical status from observations and contracts with explainable decision traces.",
+        "Parent/child hierarchy prevents child Done from becoming parent Done without parent acceptance evidence.",
+        "Residue, conflict, freshness, and approval gates are first-class and visible.",
+        "UI remains read-only and focuses on Needs Chris / intervention queue first.",
+        "Refresh/publish lifecycle prevents stale generated artifacts from masquerading as live truth."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Parent acceptance evidence",
+          "requiredBefore": "Final DONE for the parent WorkNode operational SSOT outcome.",
+          "status": "pending"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved scope reduction is recorded; prior first-envelope work is accounting/progress only and the full parent objective remains expected.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": true
+    }
+  },
+  {
+    "id": "discovered-repo-root-b605823101b3",
+    "kind": "StandaloneTask",
+    "title": "Current Chrisboard worktree",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review discovered source/plan evidence and map it to an approved goal contract.",
+    "evidenceLinks": [
+      {
+        "label": "Approved source inventory discovered Current Chrisboard worktree.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "Git",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Current Chrisboard worktree."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "repo:."
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "TODO",
+      "winningRule": "allowlisted_source_or_plan_present",
+      "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "repo_root:b605823101b3"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-repo-root-b605823101b3",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-repo-root-b605823101b3",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "repo_root:b605823101b3",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Current Chrisboard worktree",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Current Chrisboard worktree",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "repo:.",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-repo-root-b605823101b3",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Standalone task has source-backed final proof or explicit triage disposition.",
+        "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
+    }
+  },
+  {
+    "id": "discovered-triage-inbox-11c83551f93c",
+    "kind": "StandaloneTask",
+    "title": "Hermes TRIAGE inbox",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review discovered source/plan evidence and map it to an approved goal contract.",
+    "evidenceLinks": [
+      {
+        "label": "Approved source inventory discovered Hermes TRIAGE inbox.",
+        "kind": "triage",
+        "localPath": "omh:triage-inbox",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "HermesTriage",
+        "state": "source_discovered",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Approved source inventory discovered Hermes TRIAGE inbox."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T15:16:38.300Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "HermesTriage"
+      ],
+      "redactedPathLabels": [
+        "omh:triage-inbox"
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "TODO",
+      "winningRule": "allowlisted_source_or_plan_present",
+      "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "high",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "triage_inbox:11c83551f93c"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "discovered-triage-inbox-11c83551f93c",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "discovered-triage-inbox-11c83551f93c",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "triage_inbox:11c83551f93c",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Hermes TRIAGE inbox",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Hermes TRIAGE inbox",
+          "confidence": "high"
+        }
+      ]
+    },
+    "realSource": {
+      "sourceName": "Auto-discovered source inventory projection",
+      "allowlistedPath": "omh:triage-inbox",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "discovered-triage-inbox-11c83551f93c",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Standalone task has source-backed final proof or explicit triage disposition.",
+        "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
     }
   },
   {
     "id": "triage-chrisboard-control-plane-later",
     "kind": "StandaloneTask",
     "title": "Consider Chrisboard control plane later",
-    "canonicalStatus": "TRIAGE",
-    "statusReason": "Raw Hermes TRIAGE capture is preserved as an idea, not execution approval.",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
     "completionDepth": "unknown",
     "discordThread": {
       "label": "Thread/session anchor",
@@ -423,7 +2948,7 @@
     },
     "executorLane": "unknown",
     "executionState": "unknown",
-    "nextAction": "Review source evidence and resolve the next conservative gate.",
+    "nextAction": "Review discovered source/plan evidence and map it to an approved goal contract.",
     "evidenceLinks": [],
     "approvalGates": [],
     "residueState": {
@@ -444,10 +2969,95 @@
       "observationCount": 1,
       "redaction": "redacted"
     },
+    "freshness": "fresh",
+    "policyDecision": {
+      "canonicalStatus": "TODO",
+      "winningRule": "fail_closed_no_matching_evidence",
+      "statusReason": "Allowlisted source, plan, or contract evidence exists, but execution/final proof is not established.",
+      "suppressedRules": [],
+      "missingEvidence": [
+        "final proof and contract/parent acceptance evidence"
+      ],
+      "conflicts": [],
+      "confidence": "medium",
+      "freshness": "fresh"
+    },
+    "identityMapping": {
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "HermesTriage:omh:triage-inbox"
+      ],
+      "aliases": [
+        {
+          "kind": "anchor_id",
+          "value": "triage-chrisboard-control-plane-later",
+          "confidence": "high"
+        },
+        {
+          "kind": "candidate_worknode_id",
+          "value": "triage-chrisboard-control-plane-later",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_id",
+          "value": "HermesTriage:omh:triage-inbox",
+          "confidence": "medium"
+        },
+        {
+          "kind": "source_label",
+          "value": "Hermes TRIAGE inbox",
+          "confidence": "medium"
+        },
+        {
+          "kind": "title",
+          "value": "Consider Chrisboard control plane later",
+          "confidence": "high"
+        }
+      ]
+    },
     "realSource": {
       "sourceName": "Generated source-backed read model",
       "allowlistedPath": "omh:triage-inbox",
       "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    },
+    "goalContract": {
+      "canonicalId": "triage-chrisboard-control-plane-later",
+      "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+      "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+      "doneCriteria": [
+        "Standalone task has source-backed final proof or explicit triage disposition.",
+        "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+      ],
+      "nonDoneIfMissing": [
+        "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+        "Status can be manually written or agent self-report can produce Done.",
+        "Goal contract and scope reduction records are absent.",
+        "Reconciliation lacks decision trace / missing evidence explanation.",
+        "Parent goal completion is inferred from children only.",
+        "Generated projection can stale silently without freshness/provenance warnings.",
+        "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+      ],
+      "approvalGates": [
+        {
+          "gate": "Read-only UI boundary",
+          "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+          "status": "not_requested"
+        },
+        {
+          "gate": "Broad source expansion",
+          "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+          "status": "not_requested"
+        }
+      ],
+      "scopeReductions": [
+        {
+          "approvedByChris": false,
+          "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+          "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+          "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+        }
+      ],
+      "parentAcceptanceRequired": false
     }
   }
 ]

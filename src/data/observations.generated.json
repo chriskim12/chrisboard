@@ -1,0 +1,504 @@
+[
+  {
+    "observationId": "cb-generated-pipeline:git:clean",
+    "sourceId": "Git:repo:.",
+    "candidateWorkNodeId": "cb-generated-pipeline",
+    "observationType": "git_clean",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "strong",
+    "summary": "Git worktree is clean.",
+    "redaction": "redacted",
+    "metadata": {
+      "changedPathCount": 0
+    }
+  },
+  {
+    "observationId": "cb-generated-pipeline:git:landed",
+    "sourceId": "Git:repo:.",
+    "candidateWorkNodeId": "cb-generated-pipeline",
+    "observationType": "git_landed",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "medium",
+    "strength": "strong",
+    "summary": "Work is on the main local integration branch, but final proof is still separate.",
+    "redaction": "redacted",
+    "metadata": {
+      "branchLine": "## gjc/chrisboard-worknode-ssot-20260625T132628Z...origin/main [ahead 1]"
+    }
+  },
+  {
+    "observationId": "cb-generated-pipeline:git:unpushed",
+    "sourceId": "Git:repo:.",
+    "candidateWorkNodeId": "cb-generated-pipeline",
+    "observationType": "git_unpushed",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Local branch has unpushed commits.",
+    "redaction": "redacted",
+    "metadata": {
+      "branchLine": "## gjc/chrisboard-worknode-ssot-20260625T132628Z...origin/main [ahead 1]"
+    }
+  },
+  {
+    "observationId": "cb-live-adapters-backlog:omh:approval-boundary:omh:specs/configured",
+    "sourceId": "OMH:omh:specs/configured",
+    "candidateWorkNodeId": "cb-live-adapters-backlog",
+    "observationType": "approval_boundary",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "OMH evidence records an approval boundary: omh:specs/configured",
+    "redaction": "redacted",
+    "metadata": {}
+  },
+  {
+    "observationId": "cb-live-adapters-backlog:omh:present:omh:specs/configured",
+    "sourceId": "OMH:omh:specs/configured",
+    "candidateWorkNodeId": "cb-live-adapters-backlog",
+    "observationType": "plan_present",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Allowlisted OMH evidence is present: omh:specs/configured",
+    "redaction": "redacted",
+    "metadata": {
+      "byteLength": 15201,
+      "kind": "file"
+    }
+  },
+  {
+    "observationId": "cb-readonly-boundary:git:clean",
+    "sourceId": "Git:repo:.",
+    "candidateWorkNodeId": "cb-readonly-boundary",
+    "observationType": "git_clean",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "strong",
+    "summary": "Git worktree is clean.",
+    "redaction": "redacted",
+    "metadata": {
+      "changedPathCount": 0
+    }
+  },
+  {
+    "observationId": "cb-readonly-boundary:git:landed",
+    "sourceId": "Git:repo:.",
+    "candidateWorkNodeId": "cb-readonly-boundary",
+    "observationType": "git_landed",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "medium",
+    "strength": "strong",
+    "summary": "Work is on the main local integration branch, but final proof is still separate.",
+    "redaction": "redacted",
+    "metadata": {
+      "branchLine": "## gjc/chrisboard-worknode-ssot-20260625T132628Z...origin/main [ahead 1]"
+    }
+  },
+  {
+    "observationId": "cb-readonly-boundary:git:unpushed",
+    "sourceId": "Git:repo:.",
+    "candidateWorkNodeId": "cb-readonly-boundary",
+    "observationType": "git_unpushed",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Local branch has unpushed commits.",
+    "redaction": "redacted",
+    "metadata": {
+      "branchLine": "## gjc/chrisboard-worknode-ssot-20260625T132628Z...origin/main [ahead 1]"
+    }
+  },
+  {
+    "observationId": "cb-source-read-model-proof:git:clean",
+    "sourceId": "Git:repo:.",
+    "candidateWorkNodeId": "cb-source-read-model-proof",
+    "observationType": "git_clean",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "strong",
+    "summary": "Git worktree is clean.",
+    "redaction": "redacted",
+    "metadata": {
+      "changedPathCount": 0
+    }
+  },
+  {
+    "observationId": "cb-source-read-model-proof:git:landed",
+    "sourceId": "Git:repo:.",
+    "candidateWorkNodeId": "cb-source-read-model-proof",
+    "observationType": "git_landed",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "medium",
+    "strength": "strong",
+    "summary": "Work is on the main local integration branch, but final proof is still separate.",
+    "redaction": "redacted",
+    "metadata": {
+      "branchLine": "## gjc/chrisboard-worknode-ssot-20260625T132628Z...origin/main [ahead 1]"
+    }
+  },
+  {
+    "observationId": "cb-source-read-model-proof:git:unpushed",
+    "sourceId": "Git:repo:.",
+    "candidateWorkNodeId": "cb-source-read-model-proof",
+    "observationType": "git_unpushed",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Local branch has unpushed commits.",
+    "redaction": "redacted",
+    "metadata": {
+      "branchLine": "## gjc/chrisboard-worknode-ssot-20260625T132628Z...origin/main [ahead 1]"
+    }
+  },
+  {
+    "observationId": "cb-source-read-model-proof:omh:approval-boundary:omh:plans/configured",
+    "sourceId": "OMH:omh:plans/configured",
+    "candidateWorkNodeId": "cb-source-read-model-proof",
+    "observationType": "approval_boundary",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "OMH evidence records an approval boundary: omh:plans/configured",
+    "redaction": "redacted",
+    "metadata": {}
+  },
+  {
+    "observationId": "cb-source-read-model-proof:omh:approval-boundary:omh:specs/configured",
+    "sourceId": "OMH:omh:specs/configured",
+    "candidateWorkNodeId": "cb-source-read-model-proof",
+    "observationType": "approval_boundary",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "OMH evidence records an approval boundary: omh:specs/configured",
+    "redaction": "redacted",
+    "metadata": {}
+  },
+  {
+    "observationId": "cb-source-read-model-proof:omh:present:omh:plans/configured",
+    "sourceId": "OMH:omh:plans/configured",
+    "candidateWorkNodeId": "cb-source-read-model-proof",
+    "observationType": "plan_present",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Allowlisted OMH evidence is present: omh:plans/configured",
+    "redaction": "redacted",
+    "metadata": {
+      "byteLength": 30226,
+      "kind": "file"
+    }
+  },
+  {
+    "observationId": "cb-source-read-model-proof:omh:present:omh:specs/configured",
+    "sourceId": "OMH:omh:specs/configured",
+    "candidateWorkNodeId": "cb-source-read-model-proof",
+    "observationType": "plan_present",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Allowlisted OMH evidence is present: omh:specs/configured",
+    "redaction": "redacted",
+    "metadata": {
+      "byteLength": 15201,
+      "kind": "file"
+    }
+  },
+  {
+    "observationId": "cb-triage-capture-contract:triage:contract",
+    "sourceId": "HermesTriage:omh:triage-inbox",
+    "candidateWorkNodeId": "cb-triage-capture-contract",
+    "observationType": "artifact_present",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "TRIAGE inbox contract is readable with 1 contract-valid item(s).",
+    "redaction": "redacted",
+    "metadata": {
+      "itemCount": 1
+    }
+  },
+  {
+    "observationId": "cb-ultragoal-execution:gjc:execution_active:hermes-goal-run:redacted",
+    "sourceId": "GJC:hermes-goal-run:redacted",
+    "candidateWorkNodeId": "cb-ultragoal-execution",
+    "observationType": "execution_active",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "strong",
+    "summary": "Hermes Ultragoal run root is present for current execution.",
+    "redaction": "redacted",
+    "metadata": {
+      "kind": "directory"
+    }
+  },
+  {
+    "observationId": "discovered-gjc-state-3291444abaad:gjc:artifact_present:repo:.gjc/",
+    "sourceId": "GJC:repo:.gjc/",
+    "candidateWorkNodeId": "discovered-gjc-state-3291444abaad",
+    "observationType": "artifact_present",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Allowlisted GJC artifact is present: repo:.gjc/",
+    "redaction": "redacted",
+    "metadata": {
+      "kind": "directory"
+    }
+  },
+  {
+    "observationId": "discovered-gjc-state-3291444abaad:inventory:discovered",
+    "sourceId": "gjc_state:3291444abaad",
+    "candidateWorkNodeId": "discovered-gjc-state-3291444abaad",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Repo-local GJC state.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "configured",
+      "statKind": "directory",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "discovered-hermes-goal-runs-fb4e3a156431:inventory:discovered",
+    "sourceId": "hermes_goal_runs:fb4e3a156431",
+    "candidateWorkNodeId": "discovered-hermes-goal-runs-fb4e3a156431",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Hermes local goal/session traces.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "configured",
+      "statKind": "directory",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "discovered-local-repo-1-9a23975b9a63:inventory:discovered",
+    "sourceId": "local_repo_1:9a23975b9a63",
+    "candidateWorkNodeId": "discovered-local-repo-1-9a23975b9a63",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Discovered allowlisted local repo 1.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "auto_discovered",
+      "statKind": "directory",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "discovered-local-repo-2-9a23975b9a63:inventory:discovered",
+    "sourceId": "local_repo_2:9a23975b9a63",
+    "candidateWorkNodeId": "discovered-local-repo-2-9a23975b9a63",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Discovered allowlisted local repo 2.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "auto_discovered",
+      "statKind": "directory",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "discovered-local-repo-3-9a23975b9a63:inventory:discovered",
+    "sourceId": "local_repo_3:9a23975b9a63",
+    "candidateWorkNodeId": "discovered-local-repo-3-9a23975b9a63",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Discovered allowlisted local repo 3.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "auto_discovered",
+      "statKind": "directory",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "discovered-local-repo-4-9a23975b9a63:inventory:discovered",
+    "sourceId": "local_repo_4:9a23975b9a63",
+    "candidateWorkNodeId": "discovered-local-repo-4-9a23975b9a63",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Discovered allowlisted local repo 4.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "auto_discovered",
+      "statKind": "directory",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "discovered-local-repo-5-9a23975b9a63:inventory:discovered",
+    "sourceId": "local_repo_5:9a23975b9a63",
+    "candidateWorkNodeId": "discovered-local-repo-5-9a23975b9a63",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Discovered allowlisted local repo 5.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "auto_discovered",
+      "statKind": "directory",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "discovered-local-worktree-1-b605823101b3:inventory:discovered",
+    "sourceId": "local_worktree_1:b605823101b3",
+    "candidateWorkNodeId": "discovered-local-worktree-1-b605823101b3",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Discovered allowlisted local worktree 1.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "auto_discovered",
+      "statKind": "directory",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "discovered-local-worktree-2-667a3b689b0e:inventory:discovered",
+    "sourceId": "local_worktree_2:667a3b689b0e",
+    "candidateWorkNodeId": "discovered-local-worktree-2-667a3b689b0e",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Discovered allowlisted local worktree 2.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "auto_discovered",
+      "statKind": "directory",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "discovered-omh-plans-b5844d8fe3ab:inventory:discovered",
+    "sourceId": "omh_plans:b5844d8fe3ab",
+    "candidateWorkNodeId": "discovered-omh-plans-b5844d8fe3ab",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Chrisboard OMH plans.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "configured",
+      "statKind": "directory",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "discovered-omh-plans-b5844d8fe3ab:omh:present:omh:plans/configured",
+    "sourceId": "OMH:omh:plans/configured",
+    "candidateWorkNodeId": "discovered-omh-plans-b5844d8fe3ab",
+    "observationType": "artifact_present",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Allowlisted OMH evidence is present: omh:plans/configured",
+    "redaction": "redacted",
+    "metadata": {
+      "byteLength": 0,
+      "kind": "directory"
+    }
+  },
+  {
+    "observationId": "discovered-omh-specs-593520a80a23:inventory:discovered",
+    "sourceId": "omh_specs:593520a80a23",
+    "candidateWorkNodeId": "discovered-omh-specs-593520a80a23",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Chrisboard OMH specs.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "configured",
+      "statKind": "directory",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "discovered-omh-specs-593520a80a23:omh:present:omh:specs/configured",
+    "sourceId": "OMH:omh:specs/configured",
+    "candidateWorkNodeId": "discovered-omh-specs-593520a80a23",
+    "observationType": "artifact_present",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Allowlisted OMH evidence is present: omh:specs/configured",
+    "redaction": "redacted",
+    "metadata": {
+      "byteLength": 0,
+      "kind": "directory"
+    }
+  },
+  {
+    "observationId": "discovered-repo-root-b605823101b3:inventory:discovered",
+    "sourceId": "repo_root:b605823101b3",
+    "candidateWorkNodeId": "discovered-repo-root-b605823101b3",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Current Chrisboard worktree.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "configured",
+      "statKind": "directory",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "discovered-triage-inbox-11c83551f93c:inventory:discovered",
+    "sourceId": "triage_inbox:11c83551f93c",
+    "candidateWorkNodeId": "discovered-triage-inbox-11c83551f93c",
+    "observationType": "source_discovered",
+    "observedAt": "2026-06-25T15:16:38.300Z",
+    "confidence": "high",
+    "strength": "medium",
+    "summary": "Approved source inventory discovered Hermes TRIAGE inbox.",
+    "redaction": "redacted",
+    "metadata": {
+      "discoveryMode": "configured",
+      "statKind": "file",
+      "freshnessTtl": "PT24H"
+    }
+  },
+  {
+    "observationId": "triage-chrisboard-control-plane-later:triage:item",
+    "sourceId": "HermesTriage:omh:triage-inbox",
+    "candidateWorkNodeId": "triage-chrisboard-control-plane-later",
+    "observationType": "triage_item",
+    "observedAt": "2026-06-25T06:49:00.000Z",
+    "confidence": "medium",
+    "strength": "weak",
+    "summary": "TRIAGE capture preserved: Consider Chrisboard control plane later",
+    "redaction": "verifier_only",
+    "metadata": {
+      "createdBy": "Chris",
+      "sourceType": "discord_thread_or_session_anchor"
+    }
+  }
+]
