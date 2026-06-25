@@ -1,0 +1,123 @@
+{
+  "schema": "chrisboard.worknodes.provenance.v1",
+  "generatedAt": "2026-06-25T11:54:05.561Z",
+  "generator": "scripts/read-model/generate-worknodes.mjs",
+  "anchorRegistry": "src/read-model/anchors/worknode-anchors.json",
+  "generatedData": "src/data/worknodes.generated.json",
+  "observationCount": 12,
+  "sourcePaths": [
+    {
+      "worknodeId": "cb-source-read-model-proof",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/plans/2026-06-25-chrisboard-source-backed-read-model.md",
+      "sourcePathLabel": "omh:plans/configured",
+      "observationType": "plan_present",
+      "redaction": "redacted",
+      "sha256": "ad520d9757e94e2920c9e5fb92a4a6aef7489fa1795466176e651c9ce28c711f"
+    },
+    {
+      "worknodeId": "cb-source-read-model-proof",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/plans/2026-06-25-chrisboard-source-backed-read-model.md",
+      "sourcePathLabel": "omh:plans/configured",
+      "observationType": "approval_boundary",
+      "redaction": "redacted",
+      "sha256": "2d49042f54db1c449e9b24732d28023449b1f231268e5f81a92cc5b31e67d6ec"
+    },
+    {
+      "worknodeId": "cb-source-read-model-proof",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md",
+      "sourcePathLabel": "omh:specs/configured",
+      "observationType": "plan_present",
+      "redaction": "redacted",
+      "sha256": "e641ff71c2510aaddb571e1e2fc9500cdecd455cbe5be4d83e02eb921960deda"
+    },
+    {
+      "worknodeId": "cb-source-read-model-proof",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md",
+      "sourcePathLabel": "omh:specs/configured",
+      "observationType": "approval_boundary",
+      "redaction": "redacted",
+      "sha256": "b6d62f2e3467c1a2ac12b0f8b017c339fe88afb08a47bdb1a7f80f55af818a9d"
+    },
+    {
+      "worknodeId": "cb-source-read-model-proof",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/repos/chrisboard",
+      "sourcePathLabel": "repo:.",
+      "observationType": "git_dirty",
+      "redaction": "redacted",
+      "sha256": "7f2e1a55927d8be0f3f7d48ba82d268be968496e9da227372e09bcfa77f73f9b"
+    },
+    {
+      "worknodeId": "cb-live-adapters-backlog",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md",
+      "sourcePathLabel": "omh:specs/configured",
+      "observationType": "plan_present",
+      "redaction": "redacted",
+      "sha256": "741643fae21d2f920f22c686fbcd434902380d38c4a616b75d709b399d19fa49"
+    },
+    {
+      "worknodeId": "cb-live-adapters-backlog",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md",
+      "sourcePathLabel": "omh:specs/configured",
+      "observationType": "approval_boundary",
+      "redaction": "redacted",
+      "sha256": "7408cacb1f7661ac675c8b33ccd9a914539f2d2bfe5a419aa7c28f7ccb1882d7"
+    },
+    {
+      "worknodeId": "cb-ultragoal-execution",
+      "sourceKind": "GJC",
+      "sourcePath": "/home/ubuntu/.hermes/goal-runs/chrisboard",
+      "sourcePathLabel": "hermes-goal-run:redacted",
+      "observationType": "execution_active",
+      "redaction": "redacted",
+      "sha256": "1df4901afaa4c1a948a1da99df5a398c44478e877c1be9e8f33aa18bf7f4ccaa"
+    },
+    {
+      "worknodeId": "cb-generated-pipeline",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/repos/chrisboard",
+      "sourcePathLabel": "repo:.",
+      "observationType": "git_dirty",
+      "redaction": "redacted",
+      "sha256": "2d0331de6f63fc47a0437811ec5b9612069c43268fb69429dc5276eaba591ac3"
+    },
+    {
+      "worknodeId": "cb-readonly-boundary",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/repos/chrisboard",
+      "sourcePathLabel": "repo:.",
+      "observationType": "git_dirty",
+      "redaction": "redacted",
+      "sha256": "1eec10ad0a8977a4581c81032638c894afd520e4c890201ea1da3839a16dd3c2"
+    },
+    {
+      "worknodeId": "cb-triage-capture-contract",
+      "sourceKind": "HermesTriage",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/triage/inbox.jsonl",
+      "sourcePathLabel": "omh:triage-inbox",
+      "observationType": "artifact_present",
+      "redaction": "redacted",
+      "sha256": "fa7d24897154184d798d20597c1c792c776e1d8bb4d0c5b85f7b767945602afe"
+    },
+    {
+      "worknodeId": "triage-chrisboard-control-plane-later",
+      "sourceKind": "HermesTriage",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/triage/inbox.jsonl",
+      "sourcePathLabel": "omh:triage-inbox",
+      "observationType": "triage_item",
+      "redaction": "verifier_only",
+      "sha256": "93260ab778452db30a1fd9af51dbd9ae34699dd26075a54b54745cc9779b583d"
+    }
+  ],
+  "browserRedaction": {
+    "absolutePathsInBrowserData": false,
+    "rawExcerptsInBrowserData": false,
+    "evidenceLinksRedacted": true
+  }
+}

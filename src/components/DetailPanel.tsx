@@ -18,6 +18,8 @@ function parentLabel(node: WorkNode) {
 }
 
 export function DetailPanel({ node }: DetailPanelProps) {
+  const displayableApprovalGates = node.approvalGates.filter((gate) => gate.status !== 'not_applicable');
+
   return (
     <aside className="detail-panel">
       <div className="detail-head">
@@ -60,8 +62,8 @@ export function DetailPanel({ node }: DetailPanelProps) {
         <ul>
           {node.conflicts.map((conflict) => <li key={conflict.summary}>{conflict.summary}</li>)}
           {node.residueState.hasResidue ? <li>{node.residueState.summary}</li> : null}
-          {node.approvalGates.filter((gate) => gate.status !== 'not_applicable').map((gate) => <li key={gate.label}>{gate.label}: {gate.status}</li>)}
-          {node.conflicts.length === 0 && !node.residueState.hasResidue && node.approvalGates.length === 0 ? <li>None</li> : null}
+          {displayableApprovalGates.map((gate) => <li key={gate.label}>{gate.label}: {gate.status}</li>)}
+          {node.conflicts.length === 0 && !node.residueState.hasResidue && displayableApprovalGates.length === 0 ? <li>None</li> : null}
         </ul>
       </section>
     </aside>

@@ -1,0 +1,23 @@
+{
+  "name": "fixture-residue-dirty-worktree",
+  "expectedStatus": "RESIDUE",
+  "mustNotBe": "DONE",
+  "observations": [
+    {
+      "sourceKind": "Git",
+      "observationType": "git_dirty",
+      "strength": "medium",
+      "confidence": "high",
+      "summary": "Dirty worktree evidence creates residue instead of false DONE.",
+      "redaction": "redacted"
+    },
+    {
+      "sourceKind": "Git",
+      "observationType": "git_unpushed",
+      "strength": "medium",
+      "confidence": "high",
+      "summary": "Unpushed local commits require cleanup accounting.",
+      "redaction": "redacted"
+    }
+  ]
+}

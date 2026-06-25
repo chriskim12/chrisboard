@@ -17,7 +17,7 @@ export function Board({ nodes }: BoardProps) {
   const judgedNodes = useMemo(() => {
     return nodes.map((node) => {
       const children = nodes.filter((candidate) => candidate.kind === 'ChildWork' && candidate.parentGoalId === node.id);
-      return { ...node, completionDepth: deriveCompletionDepth(node, children) };
+      return { ...node, completionDepth: node.completionDepth === 'unknown' ? deriveCompletionDepth(node, children) : node.completionDepth };
     });
   }, [nodes]);
 

@@ -18,8 +18,12 @@ export function assertReadOnlyAdapter(adapter: ReadOnlyAdapter): void {
   }
 }
 
+function cloneWorkNode(node: WorkNode): WorkNode {
+  return structuredClone(node);
+}
+
 export async function loadReadOnlyWorkNodes(adapters: readonly ReadOnlyAdapter[]): Promise<WorkNode[]> {
   adapters.forEach(assertReadOnlyAdapter);
   const groups = await Promise.all(adapters.map((adapter) => adapter.loadWorkNodes()));
-  return groups.flat().map((node) => ({ ...node }));
+  return groups.flat().map(cloneWorkNode);
 }

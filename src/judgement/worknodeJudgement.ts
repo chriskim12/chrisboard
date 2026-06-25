@@ -9,9 +9,10 @@ export function deriveCompletionDepth(node: WorkNode, children: WorkNode[] = [])
     return node.canonicalStatus === 'DONE' ? 'child_done' : 'unknown';
   }
 
-  const hasParentAcceptance = node.sourceStates.some(
-    (source) => source.state.toLowerCase().includes('parent accepted') || source.state.toLowerCase().includes('parent verified'),
-  );
+  const hasParentAcceptance = node.sourceStates.some((source) => {
+    const state = source.state.toLowerCase();
+    return state === 'parent_acceptance' || state.includes('parent accepted') || state.includes('parent verified');
+  });
 
   if (node.canonicalStatus === 'DONE' && hasParentAcceptance) {
     return 'parent_done';
@@ -25,14 +26,20 @@ export function deriveCompletionDepth(node: WorkNode, children: WorkNode[] = [])
 }
 
 export function relationshipIssues(nodes: WorkNode[]): string[] {
-  const ids = new Set(nodes.map((node) => node.id));
+  const nodeById = new Map(nodes.map((node) => [node.id, node]));
   return nodes.flatMap((node) => {
     if (node.kind === 'ParentGoal' && node.parentGoalId) {
       return [`${node.id}: ParentGoal must not carry parentGoalId`];
     }
 
-    if (node.kind === 'ChildWork' && node.parentGoalId && !ids.has(node.parentGoalId)) {
-      return [`${node.id}: ChildWork references missing parentGoalId ${node.parentGoalId}`];
+    if (node.kind === 'ChildWork' && node.parentGoalId) {
+      const parent = nodeById.get(node.parentGoalId);
+      if (!parent) {
+        return [`${node.id}: ChildWork references missing parentGoalId ${node.parentGoalId}`];
+      }
+      if (parent.kind !== 'ParentGoal') {
+        return [`${node.id}: ChildWork parentGoalId ${node.parentGoalId} is not a ParentGoal`];
+      }
     }
 
     if (node.kind === 'ChildWork' && !node.parentGoalId && !node.parentGoalTitle) {

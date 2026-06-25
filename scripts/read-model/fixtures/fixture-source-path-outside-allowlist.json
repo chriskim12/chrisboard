@@ -1,0 +1,5 @@
+{
+  "name": "fixture-source-path-outside-allowlist",
+  "path": "/home/ubuntu/.ssh/id_rsa",
+  "expected": "allowlist_failure"
+}

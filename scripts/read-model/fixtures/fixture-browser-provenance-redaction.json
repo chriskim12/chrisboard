@@ -1,0 +1,6 @@
+{
+  "name": "fixture-browser-provenance-redaction",
+  "browserSafeLabels": ["repo:src/data/worknodes.generated.json", "omh:triage-inbox", "hermes-goal-run:redacted"],
+  "forbiddenBrowserSubstrings": ["/home/ubuntu/", "CLOUDFLARE", "TOKEN", "SECRET", "rawExcerpt", "provider", "customer"],
+  "expectedEvidenceRedacted": true
+}

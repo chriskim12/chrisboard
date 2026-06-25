@@ -1,0 +1,23 @@
+{
+  "name": "fixture-self-report-only",
+  "expectedStatus": "REVIEW",
+  "mustNotBe": "DONE",
+  "observations": [
+    {
+      "sourceKind": "GJC",
+      "observationType": "self_report",
+      "strength": "weak",
+      "confidence": "low",
+      "summary": "Agent reported completion without final proof or parent acceptance.",
+      "redaction": "redacted"
+    },
+    {
+      "sourceKind": "GJC",
+      "observationType": "review_needed",
+      "strength": "medium",
+      "confidence": "medium",
+      "summary": "Verifier review is required before readiness can be claimed.",
+      "redaction": "redacted"
+    }
+  ]
+}

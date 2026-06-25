@@ -1,0 +1,9 @@
+{
+  "name": "fixture-triage-writer-contract",
+  "defaultAllowedPath": "/home/ubuntu/.hermes/omh/chrisboard/triage/inbox.jsonl",
+  "envOverride": "CHRISBOARD_TRIAGE_INBOX",
+  "allowedFields": ["id", "title", "note", "source", "created_at", "created_by", "status"],
+  "allowedSourceFields": ["type", "thread_id", "session_id"],
+  "requiredStatus": "TRIAGE",
+  "forbiddenFields": ["dispatch", "plan", "promote", "execute", "assign", "pause", "resume", "markDone", "review_ready", "canonicalStatus"]
+}

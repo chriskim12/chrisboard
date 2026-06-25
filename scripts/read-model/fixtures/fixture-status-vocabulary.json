@@ -1,0 +1,5 @@
+{
+  "name": "fixture-status-vocabulary",
+  "expectedStatuses": ["TRIAGE", "TODO", "RUNNING", "REVIEW", "BLOCKED", "LANDED", "RESIDUE", "DONE"],
+  "forbiddenStatuses": ["DOING", "WAITING"]
+}

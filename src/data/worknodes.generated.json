@@ -1,0 +1,453 @@
+[
+  {
+    "id": "cb-source-read-model-proof",
+    "kind": "ParentGoal",
+    "title": "Chrisboard source-backed read model proof",
+    "canonicalStatus": "RESIDUE",
+    "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
+    "completionDepth": "unknown",
+    "discordThread": {
+      "label": "Thread/session anchor",
+      "localPath": "hermes-goal-run:configured"
+    },
+    "executorLane": "unknown",
+    "executionState": "stale",
+    "nextAction": "Review source evidence and resolve the next conservative gate.",
+    "evidenceLinks": [
+      {
+        "label": "Allowlisted OMH evidence is present: omh:plans/configured",
+        "kind": "artifact",
+        "localPath": "omh:plans/configured",
+        "redacted": true
+      },
+      {
+        "label": "OMH evidence records an approval boundary: omh:plans/configured",
+        "kind": "artifact",
+        "localPath": "omh:plans/configured",
+        "redacted": true
+      },
+      {
+        "label": "Allowlisted OMH evidence is present: omh:specs/configured",
+        "kind": "artifact",
+        "localPath": "omh:specs/configured",
+        "redacted": true
+      },
+      {
+        "label": "OMH evidence records an approval boundary: omh:specs/configured",
+        "kind": "artifact",
+        "localPath": "omh:specs/configured",
+        "redacted": true
+      },
+      {
+        "label": "Git worktree has 17 changed path(s).",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [
+      {
+        "label": "Execution/control boundary",
+        "requiredBefore": "OMH evidence records an approval boundary: omh:plans/configured",
+        "status": "not_requested"
+      },
+      {
+        "label": "Execution/control boundary",
+        "requiredBefore": "OMH evidence records an approval boundary: omh:specs/configured",
+        "status": "not_requested"
+      }
+    ],
+    "residueState": {
+      "hasResidue": true,
+      "summary": "Git worktree has 17 changed path(s).",
+      "items": [
+        "Git worktree has 17 changed path(s)."
+      ]
+    },
+    "sourceStates": [
+      {
+        "source": "OMH",
+        "state": "plan_present",
+        "observedAt": "2026-06-25T11:54:05.561Z",
+        "confidence": "high",
+        "details": "Allowlisted OMH evidence is present: omh:plans/configured"
+      },
+      {
+        "source": "OMH",
+        "state": "approval_boundary",
+        "observedAt": "2026-06-25T11:54:05.561Z",
+        "confidence": "high",
+        "details": "OMH evidence records an approval boundary: omh:plans/configured"
+      },
+      {
+        "source": "OMH",
+        "state": "plan_present",
+        "observedAt": "2026-06-25T11:54:05.561Z",
+        "confidence": "high",
+        "details": "Allowlisted OMH evidence is present: omh:specs/configured"
+      },
+      {
+        "source": "OMH",
+        "state": "approval_boundary",
+        "observedAt": "2026-06-25T11:54:05.561Z",
+        "confidence": "high",
+        "details": "OMH evidence records an approval boundary: omh:specs/configured"
+      },
+      {
+        "source": "Git",
+        "state": "git_dirty",
+        "observedAt": "2026-06-25T11:54:05.561Z",
+        "confidence": "high",
+        "details": "Git worktree has 17 changed path(s)."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T11:54:05.561Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "OMH",
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "omh:plans/configured",
+        "omh:specs/configured",
+        "repo:."
+      ],
+      "observationCount": 5,
+      "redaction": "redacted"
+    },
+    "realSource": {
+      "sourceName": "Generated source-backed read model",
+      "allowlistedPath": "omh:plans/configured, omh:specs/configured, repo:.",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    }
+  },
+  {
+    "id": "cb-live-adapters-backlog",
+    "kind": "StandaloneTask",
+    "title": "Future live adapters backlog",
+    "canonicalStatus": "TODO",
+    "statusReason": "Allowlisted plan/spec evidence exists, but execution/final proof is not established.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review source evidence and resolve the next conservative gate.",
+    "evidenceLinks": [
+      {
+        "label": "Allowlisted OMH evidence is present: omh:specs/configured",
+        "kind": "artifact",
+        "localPath": "omh:specs/configured",
+        "redacted": true
+      },
+      {
+        "label": "OMH evidence records an approval boundary: omh:specs/configured",
+        "kind": "artifact",
+        "localPath": "omh:specs/configured",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [
+      {
+        "label": "Execution/control boundary",
+        "requiredBefore": "OMH evidence records an approval boundary: omh:specs/configured",
+        "status": "not_requested"
+      }
+    ],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "OMH",
+        "state": "plan_present",
+        "observedAt": "2026-06-25T11:54:05.561Z",
+        "confidence": "high",
+        "details": "Allowlisted OMH evidence is present: omh:specs/configured"
+      },
+      {
+        "source": "OMH",
+        "state": "approval_boundary",
+        "observedAt": "2026-06-25T11:54:05.561Z",
+        "confidence": "high",
+        "details": "OMH evidence records an approval boundary: omh:specs/configured"
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T11:54:05.561Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "OMH"
+      ],
+      "redactedPathLabels": [
+        "omh:specs/configured"
+      ],
+      "observationCount": 2,
+      "redaction": "redacted"
+    },
+    "realSource": {
+      "sourceName": "Generated source-backed read model",
+      "allowlistedPath": "omh:specs/configured",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    }
+  },
+  {
+    "id": "cb-ultragoal-execution",
+    "kind": "ChildWork",
+    "title": "Current Ultragoal execution lane",
+    "parentGoalId": "cb-source-read-model-proof",
+    "parentGoalTitle": "Chrisboard source-backed read model proof",
+    "canonicalStatus": "RUNNING",
+    "statusReason": "Fresh explicit execution evidence is present.",
+    "completionDepth": "unknown",
+    "executorLane": "GJC delegated",
+    "executionState": "running",
+    "nextAction": "Review source evidence and resolve the next conservative gate.",
+    "evidenceLinks": [
+      {
+        "label": "Hermes Ultragoal run root is present for current execution.",
+        "kind": "artifact",
+        "localPath": "hermes-goal-run:redacted",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "GJC",
+        "state": "execution_active",
+        "observedAt": "2026-06-25T11:54:05.561Z",
+        "confidence": "high",
+        "details": "Hermes Ultragoal run root is present for current execution."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T11:54:05.561Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "GJC"
+      ],
+      "redactedPathLabels": [
+        "hermes-goal-run:redacted"
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "realSource": {
+      "sourceName": "Generated source-backed read model",
+      "allowlistedPath": "hermes-goal-run:redacted",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    }
+  },
+  {
+    "id": "cb-generated-pipeline",
+    "kind": "ChildWork",
+    "title": "Generated WorkNode pipeline",
+    "parentGoalId": "cb-source-read-model-proof",
+    "parentGoalTitle": "Chrisboard source-backed read model proof",
+    "canonicalStatus": "RESIDUE",
+    "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "stale",
+    "nextAction": "Review source evidence and resolve the next conservative gate.",
+    "evidenceLinks": [
+      {
+        "label": "Git worktree has 17 changed path(s).",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": true,
+      "summary": "Git worktree has 17 changed path(s).",
+      "items": [
+        "Git worktree has 17 changed path(s)."
+      ]
+    },
+    "sourceStates": [
+      {
+        "source": "Git",
+        "state": "git_dirty",
+        "observedAt": "2026-06-25T11:54:05.561Z",
+        "confidence": "high",
+        "details": "Git worktree has 17 changed path(s)."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T11:54:05.561Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "repo:."
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "realSource": {
+      "sourceName": "Generated source-backed read model",
+      "allowlistedPath": "repo:.",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    }
+  },
+  {
+    "id": "cb-readonly-boundary",
+    "kind": "ChildWork",
+    "title": "Read-only adapter and UI boundary",
+    "parentGoalId": "cb-source-read-model-proof",
+    "parentGoalTitle": "Chrisboard source-backed read model proof",
+    "canonicalStatus": "RESIDUE",
+    "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "stale",
+    "nextAction": "Review source evidence and resolve the next conservative gate.",
+    "evidenceLinks": [
+      {
+        "label": "Git worktree has 17 changed path(s).",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": true,
+      "summary": "Git worktree has 17 changed path(s).",
+      "items": [
+        "Git worktree has 17 changed path(s)."
+      ]
+    },
+    "sourceStates": [
+      {
+        "source": "Git",
+        "state": "git_dirty",
+        "observedAt": "2026-06-25T11:54:05.561Z",
+        "confidence": "high",
+        "details": "Git worktree has 17 changed path(s)."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T11:54:05.561Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "Git"
+      ],
+      "redactedPathLabels": [
+        "repo:."
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "realSource": {
+      "sourceName": "Generated source-backed read model",
+      "allowlistedPath": "repo:.",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    }
+  },
+  {
+    "id": "cb-triage-capture-contract",
+    "kind": "StandaloneTask",
+    "title": "TRIAGE inbox capture contract",
+    "canonicalStatus": "REVIEW",
+    "statusReason": "Output or self-report evidence exists and needs verifier or human review.",
+    "completionDepth": "unknown",
+    "discordThread": {
+      "label": "Thread/session anchor",
+      "localPath": "Hermes TRIAGE capture"
+    },
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review source evidence and resolve the next conservative gate.",
+    "evidenceLinks": [
+      {
+        "label": "TRIAGE inbox contract is readable with 1 contract-valid item(s).",
+        "kind": "triage",
+        "localPath": "omh:triage-inbox",
+        "redacted": true
+      }
+    ],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [
+      {
+        "source": "HermesTriage",
+        "state": "artifact_present",
+        "observedAt": "2026-06-25T11:54:05.561Z",
+        "confidence": "high",
+        "details": "TRIAGE inbox contract is readable with 1 contract-valid item(s)."
+      }
+    ],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T11:54:05.561Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "HermesTriage"
+      ],
+      "redactedPathLabels": [
+        "omh:triage-inbox"
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "realSource": {
+      "sourceName": "Generated source-backed read model",
+      "allowlistedPath": "omh:triage-inbox",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    }
+  },
+  {
+    "id": "triage-chrisboard-control-plane-later",
+    "kind": "StandaloneTask",
+    "title": "Consider Chrisboard control plane later",
+    "canonicalStatus": "TRIAGE",
+    "statusReason": "Raw Hermes TRIAGE capture is preserved as an idea, not execution approval.",
+    "completionDepth": "unknown",
+    "discordThread": {
+      "label": "Thread/session anchor",
+      "localPath": "discord_thread_or_session_anchor"
+    },
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "nextAction": "Review source evidence and resolve the next conservative gate.",
+    "evidenceLinks": [],
+    "approvalGates": [],
+    "residueState": {
+      "hasResidue": false,
+      "summary": "No residue evidence selected by reconciler.",
+      "items": []
+    },
+    "sourceStates": [],
+    "conflicts": [],
+    "updatedAt": "2026-06-25T06:49:00.000Z",
+    "browserProvenance": {
+      "sourceKinds": [
+        "HermesTriage"
+      ],
+      "redactedPathLabels": [
+        "omh:triage-inbox"
+      ],
+      "observationCount": 1,
+      "redaction": "redacted"
+    },
+    "realSource": {
+      "sourceName": "Generated source-backed read model",
+      "allowlistedPath": "omh:triage-inbox",
+      "redaction": "Browser data contains redacted source labels only; raw paths/content remain verifier-side."
+    }
+  }
+]

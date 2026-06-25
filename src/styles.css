@@ -36,9 +36,9 @@ button { font: inherit; color: inherit; }
 .work-card { display: block; width: 100%; text-align: left; background: var(--paper); border: 1px solid #ffffff; border-radius: 10px; padding: 10px; box-shadow: 0 1px 2px rgba(9, 30, 66, 0.16); cursor: pointer; }
 .work-card:hover { border-color: #b6c2cf; }
 .work-card.selected { outline: 2px solid var(--blue); outline-offset: 1px; }
-.work-card h3 { font-size: 14px; letter-spacing: -0.015em; margin: 0 0 7px; line-height: 1.24; }
+.work-card-title { display: block; font-size: 14px; font-weight: 700; letter-spacing: -0.015em; margin: 0 0 7px; line-height: 1.24; }
 .card-meta { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); font-size: 11px; margin-bottom: 7px; }
-.work-card p { color: var(--muted); font-size: 12px; line-height: 1.35; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.work-card-description { display: -webkit-box; color: var(--muted); font-size: 12px; line-height: 1.35; margin: 0; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .chips { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 8px; }
 .chip { font-size: 11px; padding: 3px 6px; border-radius: 5px; background: #f7f8f9; border: 1px solid var(--line); color: var(--muted); }
 .detail-panel { position: sticky; top: 18px; height: calc(100vh - 36px); overflow: auto; padding: 14px; }
@@ -48,11 +48,12 @@ button { font: inherit; color: inherit; }
 .status-chip { font-size: 11px; padding: 4px 7px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--muted); white-space: nowrap; }
 .status-triage { color: #5e4db2; background: #f3f0ff; border-color: #d8cffc; }
 .status-todo { color: #44546f; background: #f7f8f9; border-color: #dfe1e6; }
-.status-doing { color: #0c66e4; background: #e9f2ff; border-color: #cce0ff; }
-.status-waiting { color: #a54800; background: #fff3eb; border-color: #fedec8; }
+.status-running { color: #0c66e4; background: #e9f2ff; border-color: #cce0ff; }
 .status-review { color: #7f5f01; background: #fff7d6; border-color: #f5cd47; }
-.status-done { color: #216e4e; background: #dcfff1; border-color: #baf3db; }
+.status-blocked { color: #a54800; background: #fff3eb; border-color: #fedec8; }
+.status-landed { color: #216e4e; background: #dcfff1; border-color: #baf3db; }
 .status-residue { color: #ae2e24; background: #fff4f2; border-color: #ffd2cc; }
+.status-done { color: #216e4e; background: #dffcf0; border-color: #7ee2b8; }
 .detail-section { margin: 17px 0; }
 .detail-section h3 { font-size: 12px; margin: 0 0 8px; color: var(--ink); }
 .kv { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding: 8px 0; font-size: 13px; gap: 12px; }

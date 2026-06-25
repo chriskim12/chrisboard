@@ -1,0 +1,153 @@
+{
+  "schema": "chrisboard.worknode_anchor_registry.v1",
+  "description": "Locator-only WorkNode registry. These anchors identify where readers should look; they do not store status, final truth, done, blocked, residue, running, or execution approval.",
+  "anchors": [
+    {
+      "id": "cb-source-read-model-proof",
+      "title": "Chrisboard source-backed read model proof",
+      "kind": "ParentGoal",
+      "repo_path": ".",
+      "evidence_paths": [
+        "/home/ubuntu/.hermes/omh/chrisboard/plans/2026-06-25-chrisboard-source-backed-read-model.md",
+        "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md"
+      ],
+      "source_labels": [
+        "approved RALPLAN",
+        "confirmed spec"
+      ],
+      "thread_anchor": "hermes-goal-run:configured"
+    },
+    {
+      "id": "cb-live-adapters-backlog",
+      "title": "Future live adapters backlog",
+      "kind": "StandaloneTask",
+      "evidence_paths": [
+        "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md"
+      ],
+      "source_labels": [
+        "future adapter scope in confirmed spec"
+      ]
+    },
+    {
+      "id": "cb-ultragoal-execution",
+      "title": "Current Ultragoal execution lane",
+      "kind": "ChildWork",
+      "parent_id": "cb-source-read-model-proof",
+      "evidence_paths": [
+        "/home/ubuntu/.hermes/goal-runs/chrisboard"
+      ],
+      "source_labels": [
+        "Hermes Ultragoal run root"
+      ]
+    },
+    {
+      "id": "cb-local-review-evidence",
+      "title": "Local review evidence package",
+      "kind": "ChildWork",
+      "parent_id": "cb-source-read-model-proof",
+      "evidence_paths": [
+        "scripts/read-model/fixtures/fixture-self-report-only.json"
+      ],
+      "source_labels": [
+        "review-needed fixture proof"
+      ]
+    },
+    {
+      "id": "cb-generated-pipeline",
+      "title": "Generated WorkNode pipeline",
+      "kind": "ChildWork",
+      "parent_id": "cb-source-read-model-proof",
+      "repo_path": ".",
+      "evidence_paths": [
+        "scripts/read-model/generate-worknodes.mjs",
+        "scripts/read-model/reconcileWorkNodes.mjs",
+        "src/data/worknodes.generated.json",
+        "src/data/worknodes.provenance.json"
+      ],
+      "source_labels": [
+        "Node generator",
+        "reconciler",
+        "generated artifacts"
+      ]
+    },
+    {
+      "id": "cb-readonly-boundary",
+      "title": "Read-only adapter and UI boundary",
+      "kind": "ChildWork",
+      "parent_id": "cb-source-read-model-proof",
+      "repo_path": ".",
+      "evidence_paths": [
+        "src/adapters/readOnlyAdapter.ts",
+        "src/adapters/jsonWorkNodeAdapter.ts",
+        "src/App.tsx",
+        "src/components/Board.tsx",
+        "scripts/verify-readonly.mjs"
+      ],
+      "source_labels": [
+        "React read-only UI",
+        "adapter verifier"
+      ]
+    },
+    {
+      "id": "cb-triage-capture-contract",
+      "title": "TRIAGE inbox capture contract",
+      "kind": "StandaloneTask",
+      "evidence_paths": [
+        "/home/ubuntu/.hermes/omh/chrisboard/triage/inbox.jsonl",
+        "scripts/read-model/triageReader.mjs",
+        "scripts/read-model/fixtures/fixture-triage-writer-contract.json"
+      ],
+      "source_labels": [
+        "Hermes-local JSONL inbox",
+        "Node-only reader",
+        "writer contract fixture"
+      ],
+      "thread_anchor": "Hermes TRIAGE capture"
+    },
+    {
+      "id": "cb-landed-release-gap",
+      "title": "Landed work pending final proof",
+      "kind": "StandaloneTask",
+      "evidence_paths": [
+        "scripts/read-model/fixtures/fixture-landed-not-done.json"
+      ],
+      "source_labels": [
+        "LANDED fixture proof"
+      ]
+    },
+    {
+      "id": "cb-blocked-access-cleanup",
+      "title": "Access or approval blocker",
+      "kind": "StandaloneTask",
+      "evidence_paths": [
+        "scripts/read-model/fixtures/fixture-reader-error-blocked.json"
+      ],
+      "source_labels": [
+        "BLOCKED fixture proof"
+      ]
+    },
+    {
+      "id": "cb-residue-cleanup",
+      "title": "Residue cleanup signal",
+      "kind": "StandaloneTask",
+      "repo_path": ".",
+      "evidence_paths": [
+        "scripts/read-model/fixtures/fixture-residue-dirty-worktree.json"
+      ],
+      "source_labels": [
+        "RESIDUE fixture proof"
+      ]
+    },
+    {
+      "id": "cb-final-accepted-proof",
+      "title": "Accepted final proof fixture",
+      "kind": "StandaloneTask",
+      "evidence_paths": [
+        "scripts/read-model/fixtures/fixture-parent-accepted-final-proof.json"
+      ],
+      "source_labels": [
+        "DONE fixture proof"
+      ]
+    }
+  ]
+}

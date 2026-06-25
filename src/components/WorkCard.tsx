@@ -20,26 +20,26 @@ export function WorkCard({ node, selected, onSelect }: WorkCardProps) {
   const parent = node.parentGoalTitle ?? (node.kind === 'ParentGoal' ? 'Parent goal' : 'Standalone');
   const smallSignals = [
     needsChris(node) ? 'Needs Chris' : undefined,
-    node.blocker ? 'Blocked' : undefined,
+    node.executionState === 'blocked' ? 'Blocked' : undefined,
     node.conflicts.length > 0 ? 'Conflict' : undefined,
     node.residueState.hasResidue ? 'Residue' : undefined,
     node.evidenceLinks.length > 0 ? `Evidence ${node.evidenceLinks.length}` : undefined,
   ].filter(Boolean);
 
   return (
-    <button className={`work-card ${selected ? 'selected' : ''}`} onClick={() => onSelect(node)} type="button">
-      <h3>{node.title}</h3>
-      <div className="card-meta">
+    <button aria-pressed={selected} className={`work-card ${selected ? 'selected' : ''}`} onClick={() => onSelect(node)} type="button">
+      <span className="work-card-title">{node.title}</span>
+      <span className="card-meta">
         <span>{parent}</span>
         <span>{shortLane(node.executorLane)}</span>
-      </div>
-      <p>{node.blocker ?? node.nextAction ?? node.statusReason}</p>
+      </span>
+      <span className="work-card-description">{node.blocker ?? node.nextAction ?? node.statusReason}</span>
       {smallSignals.length > 0 ? (
-        <div className="chips" aria-label="Signals">
+        <span className="chips" aria-label="Signals">
           {smallSignals.map((signal) => (
             <span className="chip" key={signal}>{signal}</span>
           ))}
-        </div>
+        </span>
       ) : null}
     </button>
   );

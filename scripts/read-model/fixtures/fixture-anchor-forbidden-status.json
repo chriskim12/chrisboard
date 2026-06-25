@@ -1,0 +1,12 @@
+{
+  "schema": "chrisboard.worknode_anchor_registry.v1",
+  "anchors": [
+    {
+      "id": "bad-anchor",
+      "title": "Forbidden status anchor",
+      "kind": "StandaloneTask",
+      "canonicalStatus": "DONE",
+      "evidence_paths": ["README.md"]
+    }
+  ]
+}

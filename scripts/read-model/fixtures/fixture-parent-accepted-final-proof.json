@@ -1,0 +1,23 @@
+{
+  "name": "fixture-parent-accepted-final-proof",
+  "expectedStatus": "DONE",
+  "expectedCompletionDepth": "parent_done",
+  "observations": [
+    {
+      "sourceKind": "OMH",
+      "observationType": "final_proof",
+      "strength": "final",
+      "confidence": "high",
+      "summary": "Final target proof is present and verified.",
+      "redaction": "redacted"
+    },
+    {
+      "sourceKind": "OMH",
+      "observationType": "parent_acceptance",
+      "strength": "final",
+      "confidence": "high",
+      "summary": "Parent accepted final proof.",
+      "redaction": "redacted"
+    }
+  ]
+}

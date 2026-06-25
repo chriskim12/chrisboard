@@ -1,13 +1,13 @@
-import worknodes from '../data/worknodes.json';
-import type { WorkNode } from '../domain/worknode';
+import worknodes from '../data/worknodes.generated.json';
+import { parseWorkNodes } from '../domain/worknode';
 import type { ReadOnlyAdapter } from './readOnlyAdapter';
 
 export const jsonWorkNodeAdapter: ReadOnlyAdapter = {
   id: 'json-worknodes',
-  label: 'Committed WorkNode read model',
+  label: 'Generated source-backed WorkNode read model',
   mode: 'read-only',
-  allowlistedSources: ['src/data/worknodes.json'],
+  allowlistedSources: ['src/data/worknodes.generated.json', 'src/data/worknodes.provenance.json'],
   async loadWorkNodes() {
-    return worknodes as WorkNode[];
+    return parseWorkNodes(worknodes);
   },
 };

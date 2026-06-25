@@ -1,0 +1,14 @@
+{
+  "name": "fixture-landed-not-done",
+  "expectedStatus": "LANDED",
+  "observations": [
+    {
+      "sourceKind": "Git",
+      "observationType": "git_landed",
+      "strength": "strong",
+      "confidence": "high",
+      "summary": "Integration branch contains the change, but final proof is absent.",
+      "redaction": "redacted"
+    }
+  ]
+}

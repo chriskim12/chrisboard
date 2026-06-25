@@ -1,0 +1,37 @@
+{
+  "name": "fixture-parent-child-done-no-parent-acceptance",
+  "parentExpectedCompletionDepth": "parent_partial",
+  "parentMustNotBe": "parent_done",
+  "parentExpectedStatusNot": "DONE",
+  "parent": {
+    "id": "fixture-parent",
+    "kind": "ParentGoal",
+    "title": "Fixture parent without acceptance",
+    "canonicalStatus": "REVIEW",
+    "statusReason": "Child is done but parent acceptance is absent.",
+    "completionDepth": "unknown",
+    "executorLane": "unknown",
+    "executionState": "unknown",
+    "evidenceLinks": [],
+    "approvalGates": [],
+    "residueState": { "hasResidue": false, "summary": "none", "items": [] },
+    "sourceStates": [],
+    "conflicts": []
+  },
+  "child": {
+    "id": "fixture-child",
+    "kind": "ChildWork",
+    "title": "Fixture child done",
+    "parentGoalId": "fixture-parent",
+    "canonicalStatus": "DONE",
+    "statusReason": "Child proof only.",
+    "completionDepth": "child_done",
+    "executorLane": "unknown",
+    "executionState": "completed",
+    "evidenceLinks": [],
+    "approvalGates": [],
+    "residueState": { "hasResidue": false, "summary": "none", "items": [] },
+    "sourceStates": [],
+    "conflicts": []
+  }
+}
