@@ -10,10 +10,22 @@
     "completionDepth": "unknown",
     "executorLane": "unknown",
     "executionState": "stale",
-    "nextAction": "Clear residue before any DONE claim: Git worktree has 23 changed path(s).",
+    "nextAction": "Clear residue before any DONE claim: Local branch has unpushed commits.",
     "evidenceLinks": [
       {
-        "label": "Git worktree has 23 changed path(s).",
+        "label": "Git worktree is clean.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      },
+      {
+        "label": "Work is on the main local integration branch, but final proof is still separate.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      },
+      {
+        "label": "Local branch has unpushed commits.",
         "kind": "repo",
         "localPath": "repo:.",
         "redacted": true
@@ -22,22 +34,36 @@
     "approvalGates": [],
     "residueState": {
       "hasResidue": true,
-      "summary": "Git worktree has 23 changed path(s).",
+      "summary": "Local branch has unpushed commits.",
       "items": [
-        "Git worktree has 23 changed path(s)."
+        "Local branch has unpushed commits."
       ]
     },
     "sourceStates": [
       {
         "source": "Git",
-        "state": "git_dirty",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "state": "git_clean",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
-        "details": "Git worktree has 23 changed path(s)."
+        "details": "Git worktree is clean."
+      },
+      {
+        "source": "Git",
+        "state": "git_landed",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "medium",
+        "details": "Work is on the main local integration branch, but final proof is still separate."
+      },
+      {
+        "source": "Git",
+        "state": "git_unpushed",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Local branch has unpushed commits."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "Git"
@@ -45,7 +71,7 @@
       "redactedPathLabels": [
         "repo:."
       ],
-      "observationCount": 1,
+      "observationCount": 3,
       "redaction": "redacted"
     },
     "freshness": "fresh",
@@ -53,12 +79,14 @@
       "canonicalStatus": "RESIDUE",
       "winningRule": "residue_or_dirty_local_state",
       "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
-      "suppressedRules": [],
+      "suppressedRules": [
+        "landed_without_final_contract_proof"
+      ],
       "missingEvidence": [
         "final proof and contract/parent acceptance evidence"
       ],
       "conflicts": [],
-      "confidence": "high",
+      "confidence": "medium",
       "freshness": "fresh"
     },
     "identityMapping": {
@@ -190,20 +218,20 @@
       {
         "source": "OMH",
         "state": "approval_boundary",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "OMH evidence records an approval boundary: omh:specs/configured"
       },
       {
         "source": "OMH",
         "state": "plan_present",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Allowlisted OMH evidence is present: omh:specs/configured"
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "OMH"
@@ -316,10 +344,22 @@
     "completionDepth": "unknown",
     "executorLane": "unknown",
     "executionState": "stale",
-    "nextAction": "Clear residue before any DONE claim: Git worktree has 23 changed path(s).",
+    "nextAction": "Clear residue before any DONE claim: Local branch has unpushed commits.",
     "evidenceLinks": [
       {
-        "label": "Git worktree has 23 changed path(s).",
+        "label": "Git worktree is clean.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      },
+      {
+        "label": "Work is on the main local integration branch, but final proof is still separate.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      },
+      {
+        "label": "Local branch has unpushed commits.",
         "kind": "repo",
         "localPath": "repo:.",
         "redacted": true
@@ -328,22 +368,36 @@
     "approvalGates": [],
     "residueState": {
       "hasResidue": true,
-      "summary": "Git worktree has 23 changed path(s).",
+      "summary": "Local branch has unpushed commits.",
       "items": [
-        "Git worktree has 23 changed path(s)."
+        "Local branch has unpushed commits."
       ]
     },
     "sourceStates": [
       {
         "source": "Git",
-        "state": "git_dirty",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "state": "git_clean",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
-        "details": "Git worktree has 23 changed path(s)."
+        "details": "Git worktree is clean."
+      },
+      {
+        "source": "Git",
+        "state": "git_landed",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "medium",
+        "details": "Work is on the main local integration branch, but final proof is still separate."
+      },
+      {
+        "source": "Git",
+        "state": "git_unpushed",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Local branch has unpushed commits."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "Git"
@@ -351,7 +405,7 @@
       "redactedPathLabels": [
         "repo:."
       ],
-      "observationCount": 1,
+      "observationCount": 3,
       "redaction": "redacted"
     },
     "freshness": "fresh",
@@ -359,12 +413,14 @@
       "canonicalStatus": "RESIDUE",
       "winningRule": "residue_or_dirty_local_state",
       "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
-      "suppressedRules": [],
+      "suppressedRules": [
+        "landed_without_final_contract_proof"
+      ],
       "missingEvidence": [
         "final proof and contract/parent acceptance evidence"
       ],
       "conflicts": [],
-      "confidence": "high",
+      "confidence": "medium",
       "freshness": "fresh"
     },
     "identityMapping": {
@@ -464,10 +520,22 @@
     },
     "executorLane": "unknown",
     "executionState": "stale",
-    "nextAction": "Clear residue before any DONE claim: Git worktree has 23 changed path(s).",
+    "nextAction": "Clear residue before any DONE claim: Local branch has unpushed commits.",
     "evidenceLinks": [
       {
-        "label": "Git worktree has 23 changed path(s).",
+        "label": "Git worktree is clean.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      },
+      {
+        "label": "Work is on the main local integration branch, but final proof is still separate.",
+        "kind": "repo",
+        "localPath": "repo:.",
+        "redacted": true
+      },
+      {
+        "label": "Local branch has unpushed commits.",
         "kind": "repo",
         "localPath": "repo:.",
         "redacted": true
@@ -489,12 +557,6 @@
         "kind": "artifact",
         "localPath": "omh:plans/configured",
         "redacted": true
-      },
-      {
-        "label": "Allowlisted OMH evidence is present: omh:specs/configured",
-        "kind": "artifact",
-        "localPath": "omh:specs/configured",
-        "redacted": true
       }
     ],
     "approvalGates": [
@@ -511,50 +573,64 @@
     ],
     "residueState": {
       "hasResidue": true,
-      "summary": "Git worktree has 23 changed path(s).",
+      "summary": "Local branch has unpushed commits.",
       "items": [
-        "Git worktree has 23 changed path(s)."
+        "Local branch has unpushed commits."
       ]
     },
     "sourceStates": [
       {
         "source": "Git",
-        "state": "git_dirty",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "state": "git_clean",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
-        "details": "Git worktree has 23 changed path(s)."
+        "details": "Git worktree is clean."
+      },
+      {
+        "source": "Git",
+        "state": "git_landed",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "medium",
+        "details": "Work is on the main local integration branch, but final proof is still separate."
+      },
+      {
+        "source": "Git",
+        "state": "git_unpushed",
+        "observedAt": "2026-06-25T15:16:38.300Z",
+        "confidence": "high",
+        "details": "Local branch has unpushed commits."
       },
       {
         "source": "OMH",
         "state": "approval_boundary",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "OMH evidence records an approval boundary: omh:plans/configured"
       },
       {
         "source": "OMH",
         "state": "approval_boundary",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "OMH evidence records an approval boundary: omh:specs/configured"
       },
       {
         "source": "OMH",
         "state": "plan_present",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Allowlisted OMH evidence is present: omh:plans/configured"
       },
       {
         "source": "OMH",
         "state": "plan_present",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Allowlisted OMH evidence is present: omh:specs/configured"
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "Git",
@@ -565,7 +641,7 @@
         "omh:plans/configured",
         "omh:specs/configured"
       ],
-      "observationCount": 5,
+      "observationCount": 7,
       "redaction": "redacted"
     },
     "freshness": "fresh",
@@ -574,6 +650,7 @@
       "winningRule": "residue_or_dirty_local_state",
       "statusReason": "Cleanup, dirty, unpushed, stale, or residue evidence prevents false DONE.",
       "suppressedRules": [
+        "landed_without_final_contract_proof",
         "allowlisted_source_or_plan_present"
       ],
       "missingEvidence": [
@@ -581,7 +658,7 @@
         "parent acceptance evidence"
       ],
       "conflicts": [],
-      "confidence": "high",
+      "confidence": "medium",
       "freshness": "fresh"
     },
     "identityMapping": {
@@ -722,13 +799,13 @@
       {
         "source": "HermesTriage",
         "state": "artifact_present",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "TRIAGE inbox contract is readable with 1 contract-valid item(s)."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "HermesTriage"
@@ -870,13 +947,13 @@
       {
         "source": "GJC",
         "state": "execution_active",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Hermes Ultragoal run root is present for current execution."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "GJC"
@@ -1013,20 +1090,20 @@
       {
         "source": "GJC",
         "state": "artifact_present",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Allowlisted GJC artifact is present: repo:.gjc/"
       },
       {
         "source": "GJC",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Repo-local GJC state."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "GJC"
@@ -1176,13 +1253,13 @@
       {
         "source": "Hermes",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Hermes local goal/session traces."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "Hermes"
@@ -1324,13 +1401,13 @@
       {
         "source": "Git",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Discovered allowlisted local repo 1."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "Git"
@@ -1460,13 +1537,13 @@
       {
         "source": "Git",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Discovered allowlisted local repo 2."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "Git"
@@ -1596,13 +1673,13 @@
       {
         "source": "Git",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Discovered allowlisted local repo 3."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "Git"
@@ -1732,13 +1809,13 @@
       {
         "source": "Git",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Discovered allowlisted local repo 4."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "Git"
@@ -1868,13 +1945,13 @@
       {
         "source": "Git",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Discovered allowlisted local repo 5."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "Git"
@@ -2004,13 +2081,13 @@
       {
         "source": "Git",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Discovered allowlisted local worktree 1."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "Git"
@@ -2140,13 +2217,13 @@
       {
         "source": "Git",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Discovered allowlisted local worktree 2."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "Git"
@@ -2282,20 +2359,20 @@
       {
         "source": "OMH",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Chrisboard OMH plans."
       },
       {
         "source": "OMH",
         "state": "artifact_present",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Allowlisted OMH evidence is present: omh:plans/configured"
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "OMH"
@@ -2451,20 +2528,20 @@
       {
         "source": "OMH",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Chrisboard OMH specs."
       },
       {
         "source": "OMH",
         "state": "artifact_present",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Allowlisted OMH evidence is present: omh:specs/configured"
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "OMH"
@@ -2614,13 +2691,13 @@
       {
         "source": "Git",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Current Chrisboard worktree."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "Git"
@@ -2750,13 +2827,13 @@
       {
         "source": "HermesTriage",
         "state": "source_discovered",
-        "observedAt": "2026-06-25T15:07:05.929Z",
+        "observedAt": "2026-06-25T15:16:38.300Z",
         "confidence": "high",
         "details": "Approved source inventory discovered Hermes TRIAGE inbox."
       }
     ],
     "conflicts": [],
-    "updatedAt": "2026-06-25T15:07:05.929Z",
+    "updatedAt": "2026-06-25T15:16:38.300Z",
     "browserProvenance": {
       "sourceKinds": [
         "HermesTriage"

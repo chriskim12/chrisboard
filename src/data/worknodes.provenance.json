@@ -1,6 +1,6 @@
 {
   "schema": "chrisboard.worknodes.provenance.v2",
-  "generatedAt": "2026-06-25T15:07:05.929Z",
+  "generatedAt": "2026-06-25T15:16:38.300Z",
   "generator": "scripts/read-model/generate-worknodes.mjs",
   "anchorRegistry": "src/read-model/anchors/worknode-anchors.json",
   "generatedData": "src/data/worknodes.generated.json",
@@ -9,7 +9,7 @@
   "identityGraphData": "src/data/identity-graph.generated.json",
   "goalContractsData": "src/data/goal-contracts.generated.json",
   "sourceRecordCount": 13,
-  "observationCount": 28,
+  "observationCount": 34,
   "nodeCount": 20,
   "identityNodeCount": 20,
   "goalContractCount": 20,
@@ -140,9 +140,31 @@
       "sourceKind": "Git",
       "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
       "sourcePathLabel": "repo:.",
-      "observationType": "git_dirty",
+      "observationType": "git_clean",
       "redaction": "redacted",
-      "sha256": "0007feae4c1ba4628405c99264c4115ca9d54d1080260ea60e5b86f6e02e8564"
+      "sha256": "6dfd1ee32d2d13c00b28f2d884fc82292218718699edaa8edae3b7565d68bd25"
+    },
+    {
+      "worknodeId": "cb-generated-pipeline",
+      "candidateWorkNodeId": "cb-generated-pipeline",
+      "sourceId": "Git:repo:.",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
+      "sourcePathLabel": "repo:.",
+      "observationType": "git_landed",
+      "redaction": "redacted",
+      "sha256": "2f05ef7d0a0e5536c5075b117b595f407365b8f3a85d0cacbfe5d5f3f9d385ac"
+    },
+    {
+      "worknodeId": "cb-generated-pipeline",
+      "candidateWorkNodeId": "cb-generated-pipeline",
+      "sourceId": "Git:repo:.",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
+      "sourcePathLabel": "repo:.",
+      "observationType": "git_unpushed",
+      "redaction": "redacted",
+      "sha256": "7c53edbba7b25c5c12799aa53d65ac10865272eba83e5a02af18b5cf4851d5dd"
     },
     {
       "worknodeId": "cb-live-adapters-backlog",
@@ -173,9 +195,31 @@
       "sourceKind": "Git",
       "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
       "sourcePathLabel": "repo:.",
-      "observationType": "git_dirty",
+      "observationType": "git_clean",
       "redaction": "redacted",
-      "sha256": "2fd6063b52f06d0f3ebedf0e3bec8e06fd57dba05e3ebbba45fb8bf23a9dd8b5"
+      "sha256": "d2d71c4547bf731fc54a437a85e3282c3631ce7116936b695c9ed9c9a677e345"
+    },
+    {
+      "worknodeId": "cb-readonly-boundary",
+      "candidateWorkNodeId": "cb-readonly-boundary",
+      "sourceId": "Git:repo:.",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
+      "sourcePathLabel": "repo:.",
+      "observationType": "git_landed",
+      "redaction": "redacted",
+      "sha256": "632fabe10e4277f4976a716f1893b5245c21435b385351309bbda771b4dbe5eb"
+    },
+    {
+      "worknodeId": "cb-readonly-boundary",
+      "candidateWorkNodeId": "cb-readonly-boundary",
+      "sourceId": "Git:repo:.",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
+      "sourcePathLabel": "repo:.",
+      "observationType": "git_unpushed",
+      "redaction": "redacted",
+      "sha256": "f8b162aa3d50dcbc52761de1180b74945047bdb293626e77dfac8830ec762a98"
     },
     {
       "worknodeId": "cb-source-read-model-proof",
@@ -184,9 +228,31 @@
       "sourceKind": "Git",
       "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
       "sourcePathLabel": "repo:.",
-      "observationType": "git_dirty",
+      "observationType": "git_clean",
       "redaction": "redacted",
-      "sha256": "453907793a1e52467dba7ea4b6687ae325a8d69a207123e08f71de27d42baa56"
+      "sha256": "a19907587d85023cc02f28191972247d39fd7f3748176342f29268c5a92dc694"
+    },
+    {
+      "worknodeId": "cb-source-read-model-proof",
+      "candidateWorkNodeId": "cb-source-read-model-proof",
+      "sourceId": "Git:repo:.",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
+      "sourcePathLabel": "repo:.",
+      "observationType": "git_landed",
+      "redaction": "redacted",
+      "sha256": "bb94cfa91f2c4815f2cb59646b30ffe8062ae309f63dd60d4e94cfe9445bf2fd"
+    },
+    {
+      "worknodeId": "cb-source-read-model-proof",
+      "candidateWorkNodeId": "cb-source-read-model-proof",
+      "sourceId": "Git:repo:.",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
+      "sourcePathLabel": "repo:.",
+      "observationType": "git_unpushed",
+      "redaction": "redacted",
+      "sha256": "cf9fdbf632e508d1ec04fb98ce152e06bbb189dd1d10dfea1591d2b7c1219bfe"
     },
     {
       "worknodeId": "cb-source-read-model-proof",
@@ -443,7 +509,7 @@
     }
   ],
   "freshness": {
-    "generatedAt": "2026-06-25T15:07:05.929Z",
+    "generatedAt": "2026-06-25T15:16:38.300Z",
     "staleNodeCount": 0,
     "unknownFreshnessNodeCount": 0
   },
