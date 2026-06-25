@@ -10,8 +10,10 @@ export const REPO_ROOT = resolveEnvPath('CHRISBOARD_REPO_ROOT', process.cwd());
 export const OMH_ROOT = resolveEnvPath('CHRISBOARD_OMH_ROOT', '/home/ubuntu/.hermes/omh/chrisboard');
 export const TRIAGE_INBOX = resolveEnvPath('CHRISBOARD_TRIAGE_INBOX', resolve(OMH_ROOT, 'triage/inbox.jsonl'));
 export const ULTRAGOAL_RUN_ROOT = resolveEnvPath('CHRISBOARD_ULTRAGOAL_RUN_ROOT', '/home/ubuntu/.hermes/goal-runs/chrisboard');
+export const LOCAL_REPOS_ROOT = resolveEnvPath('CHRISBOARD_LOCAL_REPOS_ROOT', '/home/ubuntu/repos');
+export const LOCAL_WORKTREES_ROOT = resolveEnvPath('CHRISBOARD_LOCAL_WORKTREES_ROOT', '/home/ubuntu/worktrees');
 
-const ALLOWED_ROOTS = [REPO_ROOT, OMH_ROOT, ULTRAGOAL_RUN_ROOT];
+const ALLOWED_ROOTS = [REPO_ROOT, OMH_ROOT, ULTRAGOAL_RUN_ROOT, LOCAL_REPOS_ROOT, LOCAL_WORKTREES_ROOT];
 const FORBIDDEN_SEGMENTS = new Set(['.env', '.ssh', '.aws', '.config', 'secrets', 'secret', 'tokens', 'providers', 'customers', 'node_modules', 'dist']);
 
 function toAbsolute(path) {
@@ -58,9 +60,11 @@ export function sourcePathLabel(path) {
     return `omh:${[top, 'configured'].filter(Boolean).join('/')}`;
   }
   if (isInside(ULTRAGOAL_RUN_ROOT, candidate)) return process.env.CHRISBOARD_ULTRAGOAL_RUN_ROOT ? 'hermes-goal-run:configured' : 'hermes-goal-run:redacted';
+  if (isInside(LOCAL_REPOS_ROOT, candidate)) return process.env.CHRISBOARD_LOCAL_REPOS_ROOT ? 'local-repo:configured' : 'local-repo:redacted';
+  if (isInside(LOCAL_WORKTREES_ROOT, candidate)) return process.env.CHRISBOARD_LOCAL_WORKTREES_ROOT ? 'local-worktree:configured' : 'local-worktree:redacted';
   return 'redacted:allowlisted-source';
 }
 
 export function isBrowserSafePathLabel(label) {
-  return /^(repo:(?!\.\.)(?:[\w./-]+)|omh:[\w./-]+|hermes-goal-run:(?:configured|redacted))$/.test(label);
+  return /^(repo:(?!\.\.)(?:[\w./-]+)|omh:[\w./-]+|hermes-goal-run:(?:configured|redacted)|local-repo:(?:configured|redacted)|local-worktree:(?:configured|redacted)|redacted:allowlisted-source)$/.test(label);
 }

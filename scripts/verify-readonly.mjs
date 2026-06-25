@@ -1,9 +1,11 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { validateAnchorRegistry } from './read-model/anchorRegistry.mjs';
+import { buildGoalContracts, validateGoalContract } from './read-model/goalContracts.mjs';
+import { buildIdentityGraph, validateIdentityNode } from './read-model/identityGraph.mjs';
 import { assertAllowedSourcePath, isAllowedSourcePath, isBrowserSafePathLabel, TRIAGE_INBOX } from './read-model/pathAllowlist.mjs';
 import { reconcileAnchor } from './read-model/reconcileWorkNodes.mjs';
-import { createObservation } from './read-model/sourceObservation.mjs';
+import { createObservation, validateSourceRecord } from './read-model/sourceObservation.mjs';
 import { TRIAGE_ALLOWED_FIELDS, TRIAGE_ALLOWED_SOURCE_FIELDS, validateTriageEntry } from './read-model/triageReader.mjs';
 
 const root = process.cwd();
@@ -53,7 +55,10 @@ function observationsFromFixture(path, worknodeId = 'fixture-node') {
 
 function assertFixtureStatus(path, expectedStatus, message) {
   const anchor = { id: 'fixture-node', title: 'Fixture node', kind: 'StandaloneTask', evidence_paths: [path] };
-  const node = reconcileAnchor(anchor, observationsFromFixture(path));
+  const observations = observationsFromFixture(path);
+  const [identityNode] = buildIdentityGraph([anchor], observations);
+  const [goalContract] = expectedStatus === 'DONE' ? buildGoalContracts([identityNode], observations) : [undefined];
+  const node = reconcileAnchor(anchor, observations, [], { identityNode, goalContract });
   if (node.canonicalStatus !== expectedStatus) {
     throw new Error(`${message}: expected ${expectedStatus}, got ${node.canonicalStatus}`);
   }
@@ -96,7 +101,11 @@ try {
 
 const generated = readJson('src/data/worknodes.generated.json');
 const provenance = readJson('src/data/worknodes.provenance.json');
-if (!Array.isArray(generated) || generated.length < 4) throw new Error('Generated WorkNode data must contain source-backed dashboard nodes');
+const sourceRecords = readJson('src/data/source-records.generated.json');
+const generatedObservations = readJson('src/data/observations.generated.json');
+const identityGraph = readJson('src/data/identity-graph.generated.json');
+const goalContracts = readJson('src/data/goal-contracts.generated.json');
+if (!Array.isArray(generated) || generated.length < 8) throw new Error('Generated WorkNode data must contain source-backed dashboard nodes');
 const generatedStatuses = new Set(generated.map((node) => node.canonicalStatus));
 
 for (const status of forbiddenStatuses) {
@@ -117,14 +126,76 @@ for (const node of generated) {
     if (!isBrowserSafePathLabel(label)) throw new Error(`${node.id}: unsafe provenance label ${label}`);
   }
 }
+
+if (!Array.isArray(sourceRecords) || sourceRecords.length < 5) throw new Error('Generated source inventory must contain approved local/read-only sources');
+for (const record of sourceRecords) {
+  validateSourceRecord(record);
+  if (!isBrowserSafePathLabel(record.allowlistedPath)) throw new Error(`${record.sourceId}: unsafe source inventory label ${record.allowlistedPath}`);
+}
+const sourceKinds = new Set(sourceRecords.map((record) => record.sourceKind));
+for (const required of ['Git', 'GJC', 'OMH', 'Hermes', 'HermesTriage']) {
+  if (!sourceKinds.has(required)) throw new Error(`Generated source inventory missing ${required}`);
+}
+if (!sourceRecords.some((record) => record.discoveryMode === 'auto_discovered')) throw new Error('Generated source inventory must include conservative auto-discovery');
+const autoDiscoveredGitRecords = sourceRecords.filter((record) => record.sourceKind === 'Git' && record.discoveryMode === 'auto_discovered');
+const autoDiscoveredLocalRepoRecords = autoDiscoveredGitRecords.filter((record) => record.sourceId.startsWith('local_repo_'));
+const autoDiscoveredLocalWorktreeRecords = autoDiscoveredGitRecords.filter((record) => record.sourceId.startsWith('local_worktree_'));
+if (autoDiscoveredLocalRepoRecords.length < 2) throw new Error('Generated source inventory must prove broader-than-Chrisboard-only local repo discovery');
+if (autoDiscoveredLocalWorktreeRecords.length < 1) throw new Error('Generated source inventory must include allowlisted local worktree discovery');
+for (const record of autoDiscoveredGitRecords) {
+  if (/\b(?:Chrisboard|dailychingu|whystarve|clawhip|oh-my-codex|hermes-core-workflows)\b/i.test(record.browserLabel)) {
+    throw new Error(`${record.sourceId}: auto-discovered browser label must stay generic/redacted`);
+  }
+}
+
+if (!Array.isArray(generatedObservations) || generatedObservations.length < sourceRecords.length) throw new Error('Generated observation projection is missing');
+for (const observation of generatedObservations) {
+  for (const field of ['observationId', 'sourceId', 'candidateWorkNodeId', 'observationType', 'observedAt', 'confidence', 'strength', 'summary', 'redaction']) {
+    if (typeof observation[field] !== 'string' || observation[field].length === 0) throw new Error(`Generated observation missing ${field}`);
+  }
+  if ('sourcePath' in observation || 'rawExcerpt' in observation) throw new Error(`${observation.observationId}: generated observation leaks verifier-only data`);
+}
+if (!Array.isArray(identityGraph) || identityGraph.length !== generated.length) throw new Error('Generated identity graph must cover every WorkNode');
+const identityIds = new Set();
+for (const identityNode of identityGraph) {
+  validateIdentityNode(identityNode);
+  identityIds.add(identityNode.canonicalId);
+  if (JSON.stringify(identityNode).includes('canonicalStatus')) throw new Error(`${identityNode.canonicalId}: identity graph leaks status truth`);
+}
+if (!Array.isArray(goalContracts) || goalContracts.length !== generated.length) throw new Error('Generated goal contracts must cover every WorkNode');
+const contractIds = new Set();
+for (const contract of goalContracts) {
+  validateGoalContract(contract);
+  contractIds.add(contract.canonicalId);
+  if (!contract.originalGoal.includes('WorkNode operational SSOT')) throw new Error(`${contract.canonicalId}: contract does not preserve original parent goal`);
+  if (!contract.scopeReductions.some((reduction) => reduction.approvedByChris === false)) throw new Error(`${contract.canonicalId}: missing explicit unapproved scope-reduction accounting`);
+}
+for (const node of generated) {
+  if (!identityIds.has(node.id)) throw new Error(`${node.id}: missing identity graph entry`);
+  if (!contractIds.has(node.id)) throw new Error(`${node.id}: missing goal contract entry`);
+  if (!node.identityMapping || !Array.isArray(node.identityMapping.aliases)) throw new Error(`${node.id}: missing browser identity aliases`);
+  if (!node.goalContract || !node.goalContract.originalGoal.includes('WorkNode operational SSOT')) throw new Error(`${node.id}: missing browser goal contract`);
+  if (node.kind === 'ParentGoal' && node.canonicalStatus === 'DONE' && !node.goalContract.parentAcceptanceRequired) throw new Error(`${node.id}: parent DONE contract does not require parent acceptance`);
+}
+
 const generatedText = read('src/data/worknodes.generated.json');
 const redactionFixture = readJson(`${fixtureDir}/fixture-browser-provenance-redaction.json`);
 for (const forbidden of redactionFixture.forbiddenBrowserSubstrings) {
   if (generatedText.includes(forbidden)) throw new Error(`Generated browser data leaks forbidden substring ${forbidden}`);
 }
 
-if (provenance.schema !== 'chrisboard.worknodes.provenance.v1') throw new Error('Missing provenance schema');
+if (provenance.schema !== 'chrisboard.worknodes.provenance.v2') throw new Error('Missing provenance schema');
+if (provenance.identityNodeCount !== identityGraph.length) throw new Error('Provenance identity graph count does not match generated identity graph');
+if (provenance.goalContractCount !== goalContracts.length) throw new Error('Provenance goal contract count does not match generated contracts');
 if (!provenance.browserRedaction?.evidenceLinksRedacted) throw new Error('Provenance does not confirm evidence redaction');
+if (!provenance.browserRedaction?.sourceRecordsRedacted) throw new Error('Provenance does not confirm source record redaction');
+if (!provenance.browserRedaction?.observationsRedacted) throw new Error('Provenance does not confirm observation redaction');
+for (const record of provenance.sourceRecords ?? []) {
+  assertAllowedSourcePath(record.sourcePath);
+  if (!isBrowserSafePathLabel(record.sourcePathLabel)) throw new Error(`Unsafe source record provenance label ${record.sourcePathLabel}`);
+  if (!['configured', 'auto_discovered', 'manual_identity_mapping'].includes(record.discoveryMode)) throw new Error(`Invalid discovery mode ${record.discoveryMode}`);
+}
+
 for (const source of provenance.sourcePaths ?? []) {
   assertAllowedSourcePath(source.sourcePath);
   if (!isBrowserSafePathLabel(source.sourcePathLabel)) throw new Error(`Unsafe provenance label ${source.sourcePathLabel}`);
@@ -170,6 +241,9 @@ const jsonAdapter = read('src/adapters/jsonWorkNodeAdapter.ts');
 for (const required of ['mode: \'read-only\'', 'src/data/worknodes.generated.json', 'src/data/worknodes.provenance.json']) {
   if (!jsonAdapter.includes(required)) throw new Error(`JSON adapter missing required read-only/generated marker: ${required}`);
 }
+for (const required of ['src/data/identity-graph.generated.json', 'src/data/goal-contracts.generated.json']) {
+  if (!jsonAdapter.includes(required)) throw new Error(`JSON adapter missing required generated model source: ${required}`);
+}
 
 const adapterFiles = walk('src/adapters').filter((file) => file.endsWith('.ts') || file.endsWith('.tsx'));
 const forbiddenMethod = /(?:async\s+)?(?:post|put|patch|delete|dispatch|resume|pause|assign|markDone|mark_done|promote|plan|execute)\s*\(|\b(?:post|put|patch|delete|dispatch|resume|pause|assign|markDone|mark_done|promote|plan|execute)\s*:/i;
@@ -191,7 +265,7 @@ for (const file of ['src/App.tsx', 'src/components/Board.tsx', 'src/components/W
 }
 
 const readme = read('README.md');
-for (const required of ['read-only', 'Source-backed generated read model', 'TRIAGE / TODO / RUNNING / REVIEW / BLOCKED / LANDED / RESIDUE / DONE', 'src/read-model/anchors/worknode-anchors.json', '/home/ubuntu/.hermes/omh/chrisboard/triage/inbox.jsonl', 'CHRISBOARD_REPO_ROOT', 'CHRISBOARD_TRIAGE_INBOX', 'Non-goals', 'Future approval gates', 'workflow legends/subtitles are intentionally absent']) {
+for (const required of ['read-only', 'Source-backed generated read model', 'TRIAGE / TODO / RUNNING / REVIEW / BLOCKED / LANDED / RESIDUE / DONE', 'src/read-model/anchors/worknode-anchors.json', '/home/ubuntu/.hermes/omh/chrisboard/triage/inbox.jsonl', 'CHRISBOARD_REPO_ROOT', 'CHRISBOARD_TRIAGE_INBOX', 'CHRISBOARD_LOCAL_REPO_NAMES', 'CHRISBOARD_LOCAL_WORKTREE_PREFIXES', 'Non-goals', 'Future approval gates', 'workflow legends/subtitles are intentionally absent']) {
   if (!readme.includes(required)) throw new Error(`README missing ${required}`);
 }
 
@@ -199,6 +273,10 @@ console.log(JSON.stringify({
   status: 'passed',
   statuses: requiredStatuses,
   generatedWorkNodes: generated.length,
+  sourceRecords: sourceRecords.length,
+  autoDiscoveredGitRecords: autoDiscoveredGitRecords.length,
+  autoDiscoveredLocalRepos: autoDiscoveredLocalRepoRecords.length,
+  autoDiscoveredLocalWorktrees: autoDiscoveredLocalWorktreeRecords.length,
   provenanceObservations: provenance.observationCount,
   fixtures: requiredFixtures.length,
   adapterFiles,

@@ -7,7 +7,14 @@ interface WorkCardProps {
 }
 
 function needsChris(node: WorkNode) {
-  return node.executionState === 'blocked' || node.approvalGates.some((gate) => gate.status === 'pending' || gate.status === 'blocked');
+  return node.executionState === 'blocked' ||
+    node.conflicts.length > 0 ||
+    node.residueState.hasResidue ||
+    node.freshness === 'stale' ||
+    node.identityMapping?.mappingStatus === 'needs_mapping' ||
+    node.identityMapping?.mappingStatus === 'conflict' ||
+    node.approvalGates.some((gate) => gate.status === 'pending' || gate.status === 'blocked') ||
+    (node.goalContract?.approvalGates ?? []).some((gate) => gate.status === 'pending' || gate.status === 'blocked');
 }
 
 function shortLane(lane: WorkNode['executorLane']) {
@@ -18,11 +25,18 @@ function shortLane(lane: WorkNode['executorLane']) {
 
 export function WorkCard({ node, selected, onSelect }: WorkCardProps) {
   const parent = node.parentGoalTitle ?? (node.kind === 'ParentGoal' ? 'Parent goal' : 'Standalone');
+  const parentDepth = node.kind === 'ParentGoal' ? `Parent ${node.completionDepth === 'parent_done' ? 'accepted' : 'open'}` : node.completionDepth === 'child_done' ? 'Child complete' : undefined;
   const smallSignals = [
     needsChris(node) ? 'Needs Chris' : undefined,
     node.executionState === 'blocked' ? 'Blocked' : undefined,
     node.conflicts.length > 0 ? 'Conflict' : undefined,
     node.residueState.hasResidue ? 'Residue' : undefined,
+    node.freshness === 'stale' ? 'Stale' : undefined,
+    parentDepth,
+    node.identityMapping?.mappingStatus === 'auto_discovered' ? 'Auto-discovered' : undefined,
+    node.identityMapping?.mappingStatus === 'needs_mapping' ? 'Needs mapping' : undefined,
+    node.identityMapping?.mappingStatus === 'conflict' ? 'Identity conflict' : undefined,
+    node.goalContract ? 'Contract' : undefined,
     node.evidenceLinks.length > 0 ? `Evidence ${node.evidenceLinks.length}` : undefined,
   ].filter(Boolean);
 

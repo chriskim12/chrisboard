@@ -1,0 +1,145 @@
+[
+  {
+    "sourceId": "gjc_state:3291444abaad",
+    "sourceKind": "GJC",
+    "allowlistedPath": "repo:.gjc/",
+    "browserLabel": "Repo-local GJC state",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "configured",
+    "fingerprint": "ce105643c9caeac11094dcf0a959192577dc23aa8c0589ebe48577b36a49ee90",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  },
+  {
+    "sourceId": "hermes_goal_runs:fb4e3a156431",
+    "sourceKind": "Hermes",
+    "allowlistedPath": "hermes-goal-run:redacted",
+    "browserLabel": "Hermes local goal/session traces",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "configured",
+    "fingerprint": "57107703e7bca03b6cfad5565f12489bc79dbb2cb8a3b54f608de2b591b5f276",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  },
+  {
+    "sourceId": "local_repo_1:9a23975b9a63",
+    "sourceKind": "Git",
+    "allowlistedPath": "local-repo:redacted",
+    "browserLabel": "Discovered allowlisted local repo 1",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "auto_discovered",
+    "fingerprint": "8b34efbd10b25bdf65fd6a1fefbc00aa3faaabd9d0f204e74caa91936c6d2a1b",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  },
+  {
+    "sourceId": "local_repo_2:9a23975b9a63",
+    "sourceKind": "Git",
+    "allowlistedPath": "local-repo:redacted",
+    "browserLabel": "Discovered allowlisted local repo 2",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "auto_discovered",
+    "fingerprint": "19faf7f51d2965c79213572c41a2a48c10f59e4b9be6a39597dc07cf382f41e1",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  },
+  {
+    "sourceId": "local_repo_3:9a23975b9a63",
+    "sourceKind": "Git",
+    "allowlistedPath": "local-repo:redacted",
+    "browserLabel": "Discovered allowlisted local repo 3",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "auto_discovered",
+    "fingerprint": "2d473b256b15b29db73bbe6c42cbabfbb78eea19731e5ef14ffd8f1d733cdc9e",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  },
+  {
+    "sourceId": "local_repo_4:9a23975b9a63",
+    "sourceKind": "Git",
+    "allowlistedPath": "local-repo:redacted",
+    "browserLabel": "Discovered allowlisted local repo 4",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "auto_discovered",
+    "fingerprint": "831780ecc575466ff0db96cf0df06230403d118036c1b4ce55bd5b93abe02a9f",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  },
+  {
+    "sourceId": "local_repo_5:9a23975b9a63",
+    "sourceKind": "Git",
+    "allowlistedPath": "local-repo:redacted",
+    "browserLabel": "Discovered allowlisted local repo 5",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "auto_discovered",
+    "fingerprint": "98157dfdf82b351300fe1d6659e4890283fb0eaf183ddaa4ddc7f386b1b04061",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  },
+  {
+    "sourceId": "local_worktree_1:b605823101b3",
+    "sourceKind": "Git",
+    "allowlistedPath": "repo:.",
+    "browserLabel": "Discovered allowlisted local worktree 1",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "auto_discovered",
+    "fingerprint": "e8a60901ba870f2870c188c71658b833f566216b2bd98f0322feceb6127b1d07",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  },
+  {
+    "sourceId": "local_worktree_2:667a3b689b0e",
+    "sourceKind": "Git",
+    "allowlistedPath": "local-worktree:redacted",
+    "browserLabel": "Discovered allowlisted local worktree 2",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "auto_discovered",
+    "fingerprint": "7003d28f27c3132d59ec4b68ac2e1730f24071c8a6f1af62bf0ffe290dbb5fe2",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  },
+  {
+    "sourceId": "omh_plans:b5844d8fe3ab",
+    "sourceKind": "OMH",
+    "allowlistedPath": "omh:plans/configured",
+    "browserLabel": "Chrisboard OMH plans",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "configured",
+    "fingerprint": "ae48c05927360ef3d4cb9768acde915d42e3920ec05308da2bc817ef51200e0a",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  },
+  {
+    "sourceId": "omh_specs:593520a80a23",
+    "sourceKind": "OMH",
+    "allowlistedPath": "omh:specs/configured",
+    "browserLabel": "Chrisboard OMH specs",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "configured",
+    "fingerprint": "294d24718007d1db66321379d2a22c4e321483885d414ded365e9fb12a9fcb1b",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  },
+  {
+    "sourceId": "repo_root:b605823101b3",
+    "sourceKind": "Git",
+    "allowlistedPath": "repo:.",
+    "browserLabel": "Current Chrisboard worktree",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "configured",
+    "fingerprint": "18ed2307cb6da4ef3b4040a3e54c8eda0f3bbb46a5e9dd49ff146ff37d387168",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  },
+  {
+    "sourceId": "triage_inbox:11c83551f93c",
+    "sourceKind": "HermesTriage",
+    "allowlistedPath": "omh:triage-inbox",
+    "browserLabel": "Hermes TRIAGE inbox",
+    "discoveredAt": "2026-06-25T15:07:05.929Z",
+    "discoveryMode": "configured",
+    "fingerprint": "d75f4ff34fdae80fb391fafb8d585e8d3d195dc6590d86f016c273e0f5e1610c",
+    "redaction": "redacted",
+    "freshnessTtl": "PT24H"
+  }
+]

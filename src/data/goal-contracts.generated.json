@@ -1,0 +1,840 @@
+[
+  {
+    "canonicalId": "cb-generated-pipeline",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed ChildWork projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Child work has source-backed final proof or verifier receipt.",
+      "Child work has no unresolved residue, conflict, stale source, reader error, or approval blocker.",
+      "Parent goal acceptance remains separate and is not inferred from this child."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "cb-live-adapters-backlog",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Standalone task has source-backed final proof or explicit triage disposition.",
+      "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "cb-readonly-boundary",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed ChildWork projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Child work has source-backed final proof or verifier receipt.",
+      "Child work has no unresolved residue, conflict, stale source, reader error, or approval blocker.",
+      "Parent goal acceptance remains separate and is not inferred from this child."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "cb-source-read-model-proof",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Local source edits, generated artifacts, tests/build/readonly verification, commit/push/deploy where configured credentials permit; UI remains read-only and source systems retain raw evidence. Completion standard: Chris can open Chrisboard and, within 30 seconds, know what needs intervention, which work is running/blocked/review-ready/residue/stale/conflicting, why that judgment was made, what evidence supports it, what original parent goal is at stake, and what the next safe action is. The board must avoid manual status truth and must distinguish child completion, landed changes, final Done, and residue.",
+    "doneCriteria": [
+      "Observation-backed source ingestion exists for the approved source inventory.",
+      "WorkNode identity graph maps aliases/source traces to canonical work nodes.",
+      "Goal contracts capture original goal, Done criteria, approval gates, and scope reductions.",
+      "Reconciliation policy derives canonical status from observations and contracts with explainable decision traces.",
+      "Parent/child hierarchy prevents child Done from becoming parent Done without parent acceptance evidence.",
+      "Residue, conflict, freshness, and approval gates are first-class and visible.",
+      "UI remains read-only and focuses on Needs Chris / intervention queue first.",
+      "Refresh/publish lifecycle prevents stale generated artifacts from masquerading as live truth."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Parent acceptance evidence",
+        "requiredBefore": "Final DONE for the parent WorkNode operational SSOT outcome.",
+        "status": "pending"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved scope reduction is recorded; prior first-envelope work is accounting/progress only and the full parent objective remains expected.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": true
+  },
+  {
+    "canonicalId": "cb-triage-capture-contract",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Standalone task has source-backed final proof or explicit triage disposition.",
+      "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "cb-ultragoal-execution",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed ChildWork projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Child work has source-backed final proof or verifier receipt.",
+      "Child work has no unresolved residue, conflict, stale source, reader error, or approval blocker.",
+      "Parent goal acceptance remains separate and is not inferred from this child."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "discovered-gjc-state-3291444abaad",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Local source edits, generated artifacts, tests/build/readonly verification, commit/push/deploy where configured credentials permit; UI remains read-only and source systems retain raw evidence. Completion standard: Chris can open Chrisboard and, within 30 seconds, know what needs intervention, which work is running/blocked/review-ready/residue/stale/conflicting, why that judgment was made, what evidence supports it, what original parent goal is at stake, and what the next safe action is. The board must avoid manual status truth and must distinguish child completion, landed changes, final Done, and residue.",
+    "doneCriteria": [
+      "Observation-backed source ingestion exists for the approved source inventory.",
+      "WorkNode identity graph maps aliases/source traces to canonical work nodes.",
+      "Goal contracts capture original goal, Done criteria, approval gates, and scope reductions.",
+      "Reconciliation policy derives canonical status from observations and contracts with explainable decision traces.",
+      "Parent/child hierarchy prevents child Done from becoming parent Done without parent acceptance evidence.",
+      "Residue, conflict, freshness, and approval gates are first-class and visible.",
+      "UI remains read-only and focuses on Needs Chris / intervention queue first.",
+      "Refresh/publish lifecycle prevents stale generated artifacts from masquerading as live truth."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Parent acceptance evidence",
+        "requiredBefore": "Final DONE for the parent WorkNode operational SSOT outcome.",
+        "status": "pending"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved scope reduction is recorded; prior first-envelope work is accounting/progress only and the full parent objective remains expected.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": true
+  },
+  {
+    "canonicalId": "discovered-hermes-goal-runs-fb4e3a156431",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Local source edits, generated artifacts, tests/build/readonly verification, commit/push/deploy where configured credentials permit; UI remains read-only and source systems retain raw evidence. Completion standard: Chris can open Chrisboard and, within 30 seconds, know what needs intervention, which work is running/blocked/review-ready/residue/stale/conflicting, why that judgment was made, what evidence supports it, what original parent goal is at stake, and what the next safe action is. The board must avoid manual status truth and must distinguish child completion, landed changes, final Done, and residue.",
+    "doneCriteria": [
+      "Observation-backed source ingestion exists for the approved source inventory.",
+      "WorkNode identity graph maps aliases/source traces to canonical work nodes.",
+      "Goal contracts capture original goal, Done criteria, approval gates, and scope reductions.",
+      "Reconciliation policy derives canonical status from observations and contracts with explainable decision traces.",
+      "Parent/child hierarchy prevents child Done from becoming parent Done without parent acceptance evidence.",
+      "Residue, conflict, freshness, and approval gates are first-class and visible.",
+      "UI remains read-only and focuses on Needs Chris / intervention queue first.",
+      "Refresh/publish lifecycle prevents stale generated artifacts from masquerading as live truth."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Parent acceptance evidence",
+        "requiredBefore": "Final DONE for the parent WorkNode operational SSOT outcome.",
+        "status": "pending"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved scope reduction is recorded; prior first-envelope work is accounting/progress only and the full parent objective remains expected.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": true
+  },
+  {
+    "canonicalId": "discovered-local-repo-1-9a23975b9a63",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Standalone task has source-backed final proof or explicit triage disposition.",
+      "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "discovered-local-repo-2-9a23975b9a63",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Standalone task has source-backed final proof or explicit triage disposition.",
+      "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "discovered-local-repo-3-9a23975b9a63",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Standalone task has source-backed final proof or explicit triage disposition.",
+      "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "discovered-local-repo-4-9a23975b9a63",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Standalone task has source-backed final proof or explicit triage disposition.",
+      "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "discovered-local-repo-5-9a23975b9a63",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Standalone task has source-backed final proof or explicit triage disposition.",
+      "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "discovered-local-worktree-1-b605823101b3",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Standalone task has source-backed final proof or explicit triage disposition.",
+      "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "discovered-local-worktree-2-667a3b689b0e",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Standalone task has source-backed final proof or explicit triage disposition.",
+      "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "discovered-omh-plans-b5844d8fe3ab",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Local source edits, generated artifacts, tests/build/readonly verification, commit/push/deploy where configured credentials permit; UI remains read-only and source systems retain raw evidence. Completion standard: Chris can open Chrisboard and, within 30 seconds, know what needs intervention, which work is running/blocked/review-ready/residue/stale/conflicting, why that judgment was made, what evidence supports it, what original parent goal is at stake, and what the next safe action is. The board must avoid manual status truth and must distinguish child completion, landed changes, final Done, and residue.",
+    "doneCriteria": [
+      "Observation-backed source ingestion exists for the approved source inventory.",
+      "WorkNode identity graph maps aliases/source traces to canonical work nodes.",
+      "Goal contracts capture original goal, Done criteria, approval gates, and scope reductions.",
+      "Reconciliation policy derives canonical status from observations and contracts with explainable decision traces.",
+      "Parent/child hierarchy prevents child Done from becoming parent Done without parent acceptance evidence.",
+      "Residue, conflict, freshness, and approval gates are first-class and visible.",
+      "UI remains read-only and focuses on Needs Chris / intervention queue first.",
+      "Refresh/publish lifecycle prevents stale generated artifacts from masquerading as live truth."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Parent acceptance evidence",
+        "requiredBefore": "Final DONE for the parent WorkNode operational SSOT outcome.",
+        "status": "pending"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved scope reduction is recorded; prior first-envelope work is accounting/progress only and the full parent objective remains expected.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": true
+  },
+  {
+    "canonicalId": "discovered-omh-specs-593520a80a23",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Local source edits, generated artifacts, tests/build/readonly verification, commit/push/deploy where configured credentials permit; UI remains read-only and source systems retain raw evidence. Completion standard: Chris can open Chrisboard and, within 30 seconds, know what needs intervention, which work is running/blocked/review-ready/residue/stale/conflicting, why that judgment was made, what evidence supports it, what original parent goal is at stake, and what the next safe action is. The board must avoid manual status truth and must distinguish child completion, landed changes, final Done, and residue.",
+    "doneCriteria": [
+      "Observation-backed source ingestion exists for the approved source inventory.",
+      "WorkNode identity graph maps aliases/source traces to canonical work nodes.",
+      "Goal contracts capture original goal, Done criteria, approval gates, and scope reductions.",
+      "Reconciliation policy derives canonical status from observations and contracts with explainable decision traces.",
+      "Parent/child hierarchy prevents child Done from becoming parent Done without parent acceptance evidence.",
+      "Residue, conflict, freshness, and approval gates are first-class and visible.",
+      "UI remains read-only and focuses on Needs Chris / intervention queue first.",
+      "Refresh/publish lifecycle prevents stale generated artifacts from masquerading as live truth."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Parent acceptance evidence",
+        "requiredBefore": "Final DONE for the parent WorkNode operational SSOT outcome.",
+        "status": "pending"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved scope reduction is recorded; prior first-envelope work is accounting/progress only and the full parent objective remains expected.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": true
+  },
+  {
+    "canonicalId": "discovered-repo-root-b605823101b3",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Standalone task has source-backed final proof or explicit triage disposition.",
+      "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "discovered-triage-inbox-11c83551f93c",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Standalone task has source-backed final proof or explicit triage disposition.",
+      "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  },
+  {
+    "canonicalId": "triage-chrisboard-control-plane-later",
+    "originalGoal": "Chrisboard becomes Chris's WorkNode operational SSOT for scattered work identity, goal contract, evidence-backed state projection, next action, and residue/conflict/freshness accounting, while raw evidence remains in source systems and the UI stays read-only until a later control-plane approval.",
+    "approvedScope": "Evidence-backed StandaloneTask projection contributing to the parent goal; parent DONE requires separate parent acceptance evidence.",
+    "doneCriteria": [
+      "Standalone task has source-backed final proof or explicit triage disposition.",
+      "Standalone task has no unresolved residue, conflict, stale source, reader error, or approval blocker."
+    ],
+    "nonDoneIfMissing": [
+      "Auto-discovery/inventory is absent and all real work must be manually anchored.",
+      "Status can be manually written or agent self-report can produce Done.",
+      "Goal contract and scope reduction records are absent.",
+      "Reconciliation lacks decision trace / missing evidence explanation.",
+      "Parent goal completion is inferred from children only.",
+      "Generated projection can stale silently without freshness/provenance warnings.",
+      "Residue/conflict/approval gates are hidden or treated as cosmetic badges only."
+    ],
+    "approvalGates": [
+      {
+        "gate": "Read-only UI boundary",
+        "requiredBefore": "Any browser control-plane action, dispatch, status write, pause/resume, assignment, gateway, private integration, account, env, secret, or production DB mutation.",
+        "status": "not_requested"
+      },
+      {
+        "gate": "Broad source expansion",
+        "requiredBefore": "Broad Discord history ingestion or external integration/write API ingestion beyond approved safe local/read-only sources.",
+        "status": "not_requested"
+      }
+    ],
+    "scopeReductions": [
+      {
+        "approvedByChris": false,
+        "delta": "No approved child-level scope reduction is recorded; child completion cannot shrink the parent objective.",
+        "userCanNoLongerExpect": "Nothing is removed from the approved full parent objective by this record.",
+        "evidenceRef": "canonical-ralplan:2026-06-25-chrisboard-worknode-ssot-final-target"
+      }
+    ],
+    "parentAcceptanceRequired": false
+  }
+]

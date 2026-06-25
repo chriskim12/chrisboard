@@ -1,123 +1,766 @@
 {
-  "schema": "chrisboard.worknodes.provenance.v1",
-  "generatedAt": "2026-06-25T11:54:05.561Z",
+  "schema": "chrisboard.worknodes.provenance.v2",
+  "generatedAt": "2026-06-25T15:07:05.929Z",
   "generator": "scripts/read-model/generate-worknodes.mjs",
   "anchorRegistry": "src/read-model/anchors/worknode-anchors.json",
   "generatedData": "src/data/worknodes.generated.json",
-  "observationCount": 12,
-  "sourcePaths": [
+  "sourceRecordsData": "src/data/source-records.generated.json",
+  "observationsData": "src/data/observations.generated.json",
+  "identityGraphData": "src/data/identity-graph.generated.json",
+  "goalContractsData": "src/data/goal-contracts.generated.json",
+  "sourceRecordCount": 13,
+  "observationCount": 28,
+  "nodeCount": 20,
+  "identityNodeCount": 20,
+  "goalContractCount": 20,
+  "sourceRecords": [
     {
-      "worknodeId": "cb-source-read-model-proof",
-      "sourceKind": "OMH",
-      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/plans/2026-06-25-chrisboard-source-backed-read-model.md",
-      "sourcePathLabel": "omh:plans/configured",
-      "observationType": "plan_present",
-      "redaction": "redacted",
-      "sha256": "ad520d9757e94e2920c9e5fb92a4a6aef7489fa1795466176e651c9ce28c711f"
-    },
-    {
-      "worknodeId": "cb-source-read-model-proof",
-      "sourceKind": "OMH",
-      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/plans/2026-06-25-chrisboard-source-backed-read-model.md",
-      "sourcePathLabel": "omh:plans/configured",
-      "observationType": "approval_boundary",
-      "redaction": "redacted",
-      "sha256": "2d49042f54db1c449e9b24732d28023449b1f231268e5f81a92cc5b31e67d6ec"
-    },
-    {
-      "worknodeId": "cb-source-read-model-proof",
-      "sourceKind": "OMH",
-      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md",
-      "sourcePathLabel": "omh:specs/configured",
-      "observationType": "plan_present",
-      "redaction": "redacted",
-      "sha256": "e641ff71c2510aaddb571e1e2fc9500cdecd455cbe5be4d83e02eb921960deda"
-    },
-    {
-      "worknodeId": "cb-source-read-model-proof",
-      "sourceKind": "OMH",
-      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md",
-      "sourcePathLabel": "omh:specs/configured",
-      "observationType": "approval_boundary",
-      "redaction": "redacted",
-      "sha256": "b6d62f2e3467c1a2ac12b0f8b017c339fe88afb08a47bdb1a7f80f55af818a9d"
-    },
-    {
-      "worknodeId": "cb-source-read-model-proof",
-      "sourceKind": "Git",
-      "sourcePath": "/home/ubuntu/repos/chrisboard",
-      "sourcePathLabel": "repo:.",
-      "observationType": "git_dirty",
-      "redaction": "redacted",
-      "sha256": "7f2e1a55927d8be0f3f7d48ba82d268be968496e9da227372e09bcfa77f73f9b"
-    },
-    {
-      "worknodeId": "cb-live-adapters-backlog",
-      "sourceKind": "OMH",
-      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md",
-      "sourcePathLabel": "omh:specs/configured",
-      "observationType": "plan_present",
-      "redaction": "redacted",
-      "sha256": "741643fae21d2f920f22c686fbcd434902380d38c4a616b75d709b399d19fa49"
-    },
-    {
-      "worknodeId": "cb-live-adapters-backlog",
-      "sourceKind": "OMH",
-      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md",
-      "sourcePathLabel": "omh:specs/configured",
-      "observationType": "approval_boundary",
-      "redaction": "redacted",
-      "sha256": "7408cacb1f7661ac675c8b33ccd9a914539f2d2bfe5a419aa7c28f7ccb1882d7"
-    },
-    {
-      "worknodeId": "cb-ultragoal-execution",
+      "sourceId": "gjc_state:3291444abaad",
       "sourceKind": "GJC",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z/.gjc",
+      "sourcePathLabel": "repo:.gjc/",
+      "discoveryMode": "configured",
+      "redaction": "redacted",
+      "sha256": "96790eb553f435ca78dc606991ed4a6b5a8a13e0157c1e025efb2c8173c63f1d"
+    },
+    {
+      "sourceId": "hermes_goal_runs:fb4e3a156431",
+      "sourceKind": "Hermes",
       "sourcePath": "/home/ubuntu/.hermes/goal-runs/chrisboard",
       "sourcePathLabel": "hermes-goal-run:redacted",
-      "observationType": "execution_active",
+      "discoveryMode": "configured",
       "redaction": "redacted",
-      "sha256": "1df4901afaa4c1a948a1da99df5a398c44478e877c1be9e8f33aa18bf7f4ccaa"
+      "sha256": "7bffb71237376ffdf0592404202bf7a8281ad7d6f3bbecab263b99c2f938f3af"
     },
     {
-      "worknodeId": "cb-generated-pipeline",
+      "sourceId": "local_repo_1:9a23975b9a63",
       "sourceKind": "Git",
       "sourcePath": "/home/ubuntu/repos/chrisboard",
+      "sourcePathLabel": "local-repo:redacted",
+      "discoveryMode": "auto_discovered",
+      "redaction": "redacted",
+      "sha256": "e5ddd7f9978faf821b60e0d93d831b178baacef469e010ecad1fa826fdcb27f2"
+    },
+    {
+      "sourceId": "local_repo_2:9a23975b9a63",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/repos/clawhip",
+      "sourcePathLabel": "local-repo:redacted",
+      "discoveryMode": "auto_discovered",
+      "redaction": "redacted",
+      "sha256": "bc611b7f2285e55c40ee666381c9c5079d64b494d3db5e19b7bd7ed69198200b"
+    },
+    {
+      "sourceId": "local_repo_3:9a23975b9a63",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/repos/dailychingu",
+      "sourcePathLabel": "local-repo:redacted",
+      "discoveryMode": "auto_discovered",
+      "redaction": "redacted",
+      "sha256": "31b0d1368f4537dc0be6da2631d5839de6bd66bdeef0613f049895382a19dad1"
+    },
+    {
+      "sourceId": "local_repo_4:9a23975b9a63",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/repos/oh-my-codex",
+      "sourcePathLabel": "local-repo:redacted",
+      "discoveryMode": "auto_discovered",
+      "redaction": "redacted",
+      "sha256": "4e7aea3a2ed0754d6b036106bc7cdf3ebf4f176dbfb40d4b2f261862504ad4a3"
+    },
+    {
+      "sourceId": "local_repo_5:9a23975b9a63",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/repos/whystarve",
+      "sourcePathLabel": "local-repo:redacted",
+      "discoveryMode": "auto_discovered",
+      "redaction": "redacted",
+      "sha256": "1e002ef3fcd09b9dbc0e4a966b247c2f5ed97ab09f5e0a723d45c72afeb466e1"
+    },
+    {
+      "sourceId": "local_worktree_1:b605823101b3",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
+      "sourcePathLabel": "repo:.",
+      "discoveryMode": "auto_discovered",
+      "redaction": "redacted",
+      "sha256": "14a31365421d5a2424b96b860474163426ad26d59bab4ef63be1c01d97233424"
+    },
+    {
+      "sourceId": "local_worktree_2:667a3b689b0e",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/hermes-core-workflows",
+      "sourcePathLabel": "local-worktree:redacted",
+      "discoveryMode": "auto_discovered",
+      "redaction": "redacted",
+      "sha256": "abccc12d00780897ac27db8387031fea14e27f67949791dde95291836c7f30a3"
+    },
+    {
+      "sourceId": "omh_plans:b5844d8fe3ab",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/plans",
+      "sourcePathLabel": "omh:plans/configured",
+      "discoveryMode": "configured",
+      "redaction": "redacted",
+      "sha256": "ef37be00f6305e0e651e23dd950b8ff8ba4949117cbfdbf300905aa88f643dc0"
+    },
+    {
+      "sourceId": "omh_specs:593520a80a23",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs",
+      "sourcePathLabel": "omh:specs/configured",
+      "discoveryMode": "configured",
+      "redaction": "redacted",
+      "sha256": "8ad7865aaebd20918cf7315801e008b452f1079d31e7d471a9a82e9c100b93ef"
+    },
+    {
+      "sourceId": "repo_root:b605823101b3",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
+      "sourcePathLabel": "repo:.",
+      "discoveryMode": "configured",
+      "redaction": "redacted",
+      "sha256": "f14af43e91169cc17b2d7cbf314ec4559ce293b083e8ca297dde8ba0c43400bd"
+    },
+    {
+      "sourceId": "triage_inbox:11c83551f93c",
+      "sourceKind": "HermesTriage",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/triage/inbox.jsonl",
+      "sourcePathLabel": "omh:triage-inbox",
+      "discoveryMode": "configured",
+      "redaction": "redacted",
+      "sha256": "ad32701b82218e8c07abd962a44b0c05c5ec5f8f97238021b9a544567d51693d"
+    }
+  ],
+  "sourcePaths": [
+    {
+      "worknodeId": "cb-generated-pipeline",
+      "candidateWorkNodeId": "cb-generated-pipeline",
+      "sourceId": "Git:repo:.",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
       "sourcePathLabel": "repo:.",
       "observationType": "git_dirty",
       "redaction": "redacted",
-      "sha256": "2d0331de6f63fc47a0437811ec5b9612069c43268fb69429dc5276eaba591ac3"
+      "sha256": "0007feae4c1ba4628405c99264c4115ca9d54d1080260ea60e5b86f6e02e8564"
+    },
+    {
+      "worknodeId": "cb-live-adapters-backlog",
+      "candidateWorkNodeId": "cb-live-adapters-backlog",
+      "sourceId": "OMH:omh:specs/configured",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md",
+      "sourcePathLabel": "omh:specs/configured",
+      "observationType": "approval_boundary",
+      "redaction": "redacted",
+      "sha256": "f62fdb85ebaf76405a68a815447df7b14cc331a504a2328e4b8d75b14649bbe9"
+    },
+    {
+      "worknodeId": "cb-live-adapters-backlog",
+      "candidateWorkNodeId": "cb-live-adapters-backlog",
+      "sourceId": "OMH:omh:specs/configured",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md",
+      "sourcePathLabel": "omh:specs/configured",
+      "observationType": "plan_present",
+      "redaction": "redacted",
+      "sha256": "27ee884684fca843a452ce11ed2642f5f5391f78476a89832b71285b566759c7"
     },
     {
       "worknodeId": "cb-readonly-boundary",
+      "candidateWorkNodeId": "cb-readonly-boundary",
+      "sourceId": "Git:repo:.",
       "sourceKind": "Git",
-      "sourcePath": "/home/ubuntu/repos/chrisboard",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
       "sourcePathLabel": "repo:.",
       "observationType": "git_dirty",
       "redaction": "redacted",
-      "sha256": "1eec10ad0a8977a4581c81032638c894afd520e4c890201ea1da3839a16dd3c2"
+      "sha256": "2fd6063b52f06d0f3ebedf0e3bec8e06fd57dba05e3ebbba45fb8bf23a9dd8b5"
+    },
+    {
+      "worknodeId": "cb-source-read-model-proof",
+      "candidateWorkNodeId": "cb-source-read-model-proof",
+      "sourceId": "Git:repo:.",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
+      "sourcePathLabel": "repo:.",
+      "observationType": "git_dirty",
+      "redaction": "redacted",
+      "sha256": "453907793a1e52467dba7ea4b6687ae325a8d69a207123e08f71de27d42baa56"
+    },
+    {
+      "worknodeId": "cb-source-read-model-proof",
+      "candidateWorkNodeId": "cb-source-read-model-proof",
+      "sourceId": "OMH:omh:plans/configured",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/plans/2026-06-25-chrisboard-source-backed-read-model.md",
+      "sourcePathLabel": "omh:plans/configured",
+      "observationType": "approval_boundary",
+      "redaction": "redacted",
+      "sha256": "efe5bceaa575d70b38ea556bc405e74dfc950e9592c6f54406785038b1066405"
+    },
+    {
+      "worknodeId": "cb-source-read-model-proof",
+      "candidateWorkNodeId": "cb-source-read-model-proof",
+      "sourceId": "OMH:omh:specs/configured",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md",
+      "sourcePathLabel": "omh:specs/configured",
+      "observationType": "approval_boundary",
+      "redaction": "redacted",
+      "sha256": "2f5e174c80c926b9f336181f7de5f527fa753e47f9080a9999c2f4b7ba343675"
+    },
+    {
+      "worknodeId": "cb-source-read-model-proof",
+      "candidateWorkNodeId": "cb-source-read-model-proof",
+      "sourceId": "OMH:omh:plans/configured",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/plans/2026-06-25-chrisboard-source-backed-read-model.md",
+      "sourcePathLabel": "omh:plans/configured",
+      "observationType": "plan_present",
+      "redaction": "redacted",
+      "sha256": "99303bed3c794cdca09da25e8ace470abf141fb9b307f93215f00a934f4e605f"
+    },
+    {
+      "worknodeId": "cb-source-read-model-proof",
+      "candidateWorkNodeId": "cb-source-read-model-proof",
+      "sourceId": "OMH:omh:specs/configured",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs/deep-interview-chrisboard-stepwise-build.md",
+      "sourcePathLabel": "omh:specs/configured",
+      "observationType": "plan_present",
+      "redaction": "redacted",
+      "sha256": "8257982f15f77ce7226a12f67710e68be6b1ac018be7ceaa8d1677c53c6c3813"
     },
     {
       "worknodeId": "cb-triage-capture-contract",
+      "candidateWorkNodeId": "cb-triage-capture-contract",
+      "sourceId": "HermesTriage:omh:triage-inbox",
       "sourceKind": "HermesTriage",
       "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/triage/inbox.jsonl",
       "sourcePathLabel": "omh:triage-inbox",
       "observationType": "artifact_present",
       "redaction": "redacted",
-      "sha256": "fa7d24897154184d798d20597c1c792c776e1d8bb4d0c5b85f7b767945602afe"
+      "sha256": "8ccc18d37c9e8fcff6ecb82defe89b177286bcfa330722e5e06aeddb2ac1c35c"
+    },
+    {
+      "worknodeId": "cb-ultragoal-execution",
+      "candidateWorkNodeId": "cb-ultragoal-execution",
+      "sourceId": "GJC:hermes-goal-run:redacted",
+      "sourceKind": "GJC",
+      "sourcePath": "/home/ubuntu/.hermes/goal-runs/chrisboard",
+      "sourcePathLabel": "hermes-goal-run:redacted",
+      "observationType": "execution_active",
+      "redaction": "redacted",
+      "sha256": "d7e2ba6e8184686313b6cf293776a494fcd63c8f9169a44f746cbc4a3aa7deec"
+    },
+    {
+      "worknodeId": "discovered-gjc-state-3291444abaad",
+      "candidateWorkNodeId": "discovered-gjc-state-3291444abaad",
+      "sourceId": "GJC:repo:.gjc/",
+      "sourceKind": "GJC",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z/.gjc",
+      "sourcePathLabel": "repo:.gjc/",
+      "observationType": "artifact_present",
+      "redaction": "redacted",
+      "sha256": "40502f8ed45f49ad3c5a240f86173e0b073b6059c854f699db278ca4e1351ca6"
+    },
+    {
+      "worknodeId": "discovered-gjc-state-3291444abaad",
+      "candidateWorkNodeId": "discovered-gjc-state-3291444abaad",
+      "sourceId": "gjc_state:3291444abaad",
+      "sourceKind": "GJC",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z/.gjc",
+      "sourcePathLabel": "repo:.gjc/",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "335a5aed838ee9b6a6b90b2eed9f8527a9efb321fb6216a0e158ff9814d03f9f"
+    },
+    {
+      "worknodeId": "discovered-hermes-goal-runs-fb4e3a156431",
+      "candidateWorkNodeId": "discovered-hermes-goal-runs-fb4e3a156431",
+      "sourceId": "hermes_goal_runs:fb4e3a156431",
+      "sourceKind": "Hermes",
+      "sourcePath": "/home/ubuntu/.hermes/goal-runs/chrisboard",
+      "sourcePathLabel": "hermes-goal-run:redacted",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "95efcab7a0d43d3b7d0674b862c4d818410f617256fae5dcc7dcb04b29a234e3"
+    },
+    {
+      "worknodeId": "discovered-local-repo-1-9a23975b9a63",
+      "candidateWorkNodeId": "discovered-local-repo-1-9a23975b9a63",
+      "sourceId": "local_repo_1:9a23975b9a63",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/repos/chrisboard",
+      "sourcePathLabel": "local-repo:redacted",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "b5e176beafee99ec86920c1e577c69ed8162b3d00e4cf956837cefed6bff46a9"
+    },
+    {
+      "worknodeId": "discovered-local-repo-2-9a23975b9a63",
+      "candidateWorkNodeId": "discovered-local-repo-2-9a23975b9a63",
+      "sourceId": "local_repo_2:9a23975b9a63",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/repos/clawhip",
+      "sourcePathLabel": "local-repo:redacted",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "be3c210c2fe0b9f077dcdaee4142e4b513c3adbe73ee4d5ce0fd65d0a136ad69"
+    },
+    {
+      "worknodeId": "discovered-local-repo-3-9a23975b9a63",
+      "candidateWorkNodeId": "discovered-local-repo-3-9a23975b9a63",
+      "sourceId": "local_repo_3:9a23975b9a63",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/repos/dailychingu",
+      "sourcePathLabel": "local-repo:redacted",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "2efeb308726ac24e4ef27452a8649a4ae928207a6a20a4b47e179157a2d44a82"
+    },
+    {
+      "worknodeId": "discovered-local-repo-4-9a23975b9a63",
+      "candidateWorkNodeId": "discovered-local-repo-4-9a23975b9a63",
+      "sourceId": "local_repo_4:9a23975b9a63",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/repos/oh-my-codex",
+      "sourcePathLabel": "local-repo:redacted",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "744715e12ff11ccb4f20c25b5512454353d521d15276afafd53bd36e0418f0c8"
+    },
+    {
+      "worknodeId": "discovered-local-repo-5-9a23975b9a63",
+      "candidateWorkNodeId": "discovered-local-repo-5-9a23975b9a63",
+      "sourceId": "local_repo_5:9a23975b9a63",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/repos/whystarve",
+      "sourcePathLabel": "local-repo:redacted",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "55459e268840bbbb317215fc9075a8408399d72a72ec9d11825dc930ab11ddd8"
+    },
+    {
+      "worknodeId": "discovered-local-worktree-1-b605823101b3",
+      "candidateWorkNodeId": "discovered-local-worktree-1-b605823101b3",
+      "sourceId": "local_worktree_1:b605823101b3",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
+      "sourcePathLabel": "repo:.",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "ec1e1afbeff50cdc277bb67b5beca33ff62b89aa1b43bad23f434001d44d5a3a"
+    },
+    {
+      "worknodeId": "discovered-local-worktree-2-667a3b689b0e",
+      "candidateWorkNodeId": "discovered-local-worktree-2-667a3b689b0e",
+      "sourceId": "local_worktree_2:667a3b689b0e",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/hermes-core-workflows",
+      "sourcePathLabel": "local-worktree:redacted",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "2f9b92acff262e4e01fd68951aacbb588b28a6db6d7b3191349c56f60191d663"
+    },
+    {
+      "worknodeId": "discovered-omh-plans-b5844d8fe3ab",
+      "candidateWorkNodeId": "discovered-omh-plans-b5844d8fe3ab",
+      "sourceId": "omh_plans:b5844d8fe3ab",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/plans",
+      "sourcePathLabel": "omh:plans/configured",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "b20835a12c993777d46cf6563668afcf605b25bfbaea274dbc8724a591925063"
+    },
+    {
+      "worknodeId": "discovered-omh-plans-b5844d8fe3ab",
+      "candidateWorkNodeId": "discovered-omh-plans-b5844d8fe3ab",
+      "sourceId": "OMH:omh:plans/configured",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/plans",
+      "sourcePathLabel": "omh:plans/configured",
+      "observationType": "artifact_present",
+      "redaction": "redacted",
+      "sha256": "43f4a82583bab594a89c70e7186d3b65de0b66f34fa3ed31db3d82de8826954d"
+    },
+    {
+      "worknodeId": "discovered-omh-specs-593520a80a23",
+      "candidateWorkNodeId": "discovered-omh-specs-593520a80a23",
+      "sourceId": "omh_specs:593520a80a23",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs",
+      "sourcePathLabel": "omh:specs/configured",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "a6986201399b502042c5a3431140f0900d74ffc6ea073374fa007b6f9998e676"
+    },
+    {
+      "worknodeId": "discovered-omh-specs-593520a80a23",
+      "candidateWorkNodeId": "discovered-omh-specs-593520a80a23",
+      "sourceId": "OMH:omh:specs/configured",
+      "sourceKind": "OMH",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/specs",
+      "sourcePathLabel": "omh:specs/configured",
+      "observationType": "artifact_present",
+      "redaction": "redacted",
+      "sha256": "05e94e42387fed8dc4e523ecaa6ca390e05b349af6dccf98ccb5464b9ddb62a6"
+    },
+    {
+      "worknodeId": "discovered-repo-root-b605823101b3",
+      "candidateWorkNodeId": "discovered-repo-root-b605823101b3",
+      "sourceId": "repo_root:b605823101b3",
+      "sourceKind": "Git",
+      "sourcePath": "/home/ubuntu/worktrees/chrisboard-gjc-ultragoal-20260625T132628Z",
+      "sourcePathLabel": "repo:.",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "ac942a27c2ef3446ac39539e26843d520e85679ffedac01e971f6947742ca1a2"
+    },
+    {
+      "worknodeId": "discovered-triage-inbox-11c83551f93c",
+      "candidateWorkNodeId": "discovered-triage-inbox-11c83551f93c",
+      "sourceId": "triage_inbox:11c83551f93c",
+      "sourceKind": "HermesTriage",
+      "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/triage/inbox.jsonl",
+      "sourcePathLabel": "omh:triage-inbox",
+      "observationType": "source_discovered",
+      "redaction": "redacted",
+      "sha256": "ef973ad10ee1718da6004d52931d586b317b04dfe010950d10beb4f8cbeb385e"
     },
     {
       "worknodeId": "triage-chrisboard-control-plane-later",
+      "candidateWorkNodeId": "triage-chrisboard-control-plane-later",
+      "sourceId": "HermesTriage:omh:triage-inbox",
       "sourceKind": "HermesTriage",
       "sourcePath": "/home/ubuntu/.hermes/omh/chrisboard/triage/inbox.jsonl",
       "sourcePathLabel": "omh:triage-inbox",
       "observationType": "triage_item",
       "redaction": "verifier_only",
-      "sha256": "93260ab778452db30a1fd9af51dbd9ae34699dd26075a54b54745cc9779b583d"
+      "sha256": "b0592f74d0cef6be1ac17d145dd997fde7d1a63342ccc91edb11766bba9704cd"
     }
   ],
+  "freshness": {
+    "generatedAt": "2026-06-25T15:07:05.929Z",
+    "staleNodeCount": 0,
+    "unknownFreshnessNodeCount": 0
+  },
   "browserRedaction": {
     "absolutePathsInBrowserData": false,
     "rawExcerptsInBrowserData": false,
-    "evidenceLinksRedacted": true
-  }
+    "evidenceLinksRedacted": true,
+    "sourceRecordsRedacted": true,
+    "observationsRedacted": true
+  },
+  "identityGraph": [
+    {
+      "canonicalId": "cb-generated-pipeline",
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "Git:repo:."
+      ],
+      "aliasCount": 7
+    },
+    {
+      "canonicalId": "cb-live-adapters-backlog",
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "OMH:omh:specs/configured"
+      ],
+      "aliasCount": 5
+    },
+    {
+      "canonicalId": "cb-readonly-boundary",
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "Git:repo:."
+      ],
+      "aliasCount": 6
+    },
+    {
+      "canonicalId": "cb-source-read-model-proof",
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "Git:repo:.",
+        "OMH:omh:plans/configured",
+        "OMH:omh:specs/configured"
+      ],
+      "aliasCount": 8
+    },
+    {
+      "canonicalId": "cb-triage-capture-contract",
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "HermesTriage:omh:triage-inbox"
+      ],
+      "aliasCount": 7
+    },
+    {
+      "canonicalId": "cb-ultragoal-execution",
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "GJC:hermes-goal-run:redacted"
+      ],
+      "aliasCount": 5
+    },
+    {
+      "canonicalId": "discovered-gjc-state-3291444abaad",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "gjc_state:3291444abaad",
+        "GJC:repo:.gjc/"
+      ],
+      "aliasCount": 6
+    },
+    {
+      "canonicalId": "discovered-hermes-goal-runs-fb4e3a156431",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "hermes_goal_runs:fb4e3a156431"
+      ],
+      "aliasCount": 5
+    },
+    {
+      "canonicalId": "discovered-local-repo-1-9a23975b9a63",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_repo_1:9a23975b9a63"
+      ],
+      "aliasCount": 5
+    },
+    {
+      "canonicalId": "discovered-local-repo-2-9a23975b9a63",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_repo_2:9a23975b9a63"
+      ],
+      "aliasCount": 5
+    },
+    {
+      "canonicalId": "discovered-local-repo-3-9a23975b9a63",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_repo_3:9a23975b9a63"
+      ],
+      "aliasCount": 5
+    },
+    {
+      "canonicalId": "discovered-local-repo-4-9a23975b9a63",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_repo_4:9a23975b9a63"
+      ],
+      "aliasCount": 5
+    },
+    {
+      "canonicalId": "discovered-local-repo-5-9a23975b9a63",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_repo_5:9a23975b9a63"
+      ],
+      "aliasCount": 5
+    },
+    {
+      "canonicalId": "discovered-local-worktree-1-b605823101b3",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_worktree_1:b605823101b3"
+      ],
+      "aliasCount": 5
+    },
+    {
+      "canonicalId": "discovered-local-worktree-2-667a3b689b0e",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "local_worktree_2:667a3b689b0e"
+      ],
+      "aliasCount": 5
+    },
+    {
+      "canonicalId": "discovered-omh-plans-b5844d8fe3ab",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "omh_plans:b5844d8fe3ab",
+        "OMH:omh:plans/configured"
+      ],
+      "aliasCount": 6
+    },
+    {
+      "canonicalId": "discovered-omh-specs-593520a80a23",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "omh_specs:593520a80a23",
+        "OMH:omh:specs/configured"
+      ],
+      "aliasCount": 6
+    },
+    {
+      "canonicalId": "discovered-repo-root-b605823101b3",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "repo_root:b605823101b3"
+      ],
+      "aliasCount": 5
+    },
+    {
+      "canonicalId": "discovered-triage-inbox-11c83551f93c",
+      "mappingStatus": "auto_discovered",
+      "sourceRefs": [
+        "triage_inbox:11c83551f93c"
+      ],
+      "aliasCount": 5
+    },
+    {
+      "canonicalId": "triage-chrisboard-control-plane-later",
+      "mappingStatus": "mapped",
+      "sourceRefs": [
+        "HermesTriage:omh:triage-inbox"
+      ],
+      "aliasCount": 5
+    }
+  ],
+  "goalContracts": [
+    {
+      "canonicalId": "cb-generated-pipeline",
+      "doneCriteriaCount": 3,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "cb-live-adapters-backlog",
+      "doneCriteriaCount": 2,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "cb-readonly-boundary",
+      "doneCriteriaCount": 3,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "cb-source-read-model-proof",
+      "doneCriteriaCount": 8,
+      "approvalGateCount": 3,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": true
+    },
+    {
+      "canonicalId": "cb-triage-capture-contract",
+      "doneCriteriaCount": 2,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "cb-ultragoal-execution",
+      "doneCriteriaCount": 3,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "discovered-gjc-state-3291444abaad",
+      "doneCriteriaCount": 8,
+      "approvalGateCount": 3,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": true
+    },
+    {
+      "canonicalId": "discovered-hermes-goal-runs-fb4e3a156431",
+      "doneCriteriaCount": 8,
+      "approvalGateCount": 3,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": true
+    },
+    {
+      "canonicalId": "discovered-local-repo-1-9a23975b9a63",
+      "doneCriteriaCount": 2,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "discovered-local-repo-2-9a23975b9a63",
+      "doneCriteriaCount": 2,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "discovered-local-repo-3-9a23975b9a63",
+      "doneCriteriaCount": 2,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "discovered-local-repo-4-9a23975b9a63",
+      "doneCriteriaCount": 2,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "discovered-local-repo-5-9a23975b9a63",
+      "doneCriteriaCount": 2,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "discovered-local-worktree-1-b605823101b3",
+      "doneCriteriaCount": 2,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "discovered-local-worktree-2-667a3b689b0e",
+      "doneCriteriaCount": 2,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "discovered-omh-plans-b5844d8fe3ab",
+      "doneCriteriaCount": 8,
+      "approvalGateCount": 3,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": true
+    },
+    {
+      "canonicalId": "discovered-omh-specs-593520a80a23",
+      "doneCriteriaCount": 8,
+      "approvalGateCount": 3,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": true
+    },
+    {
+      "canonicalId": "discovered-repo-root-b605823101b3",
+      "doneCriteriaCount": 2,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "discovered-triage-inbox-11c83551f93c",
+      "doneCriteriaCount": 2,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    },
+    {
+      "canonicalId": "triage-chrisboard-control-plane-later",
+      "doneCriteriaCount": 2,
+      "approvalGateCount": 2,
+      "scopeReductionCount": 1,
+      "parentAcceptanceRequired": false
+    }
+  ]
 }
